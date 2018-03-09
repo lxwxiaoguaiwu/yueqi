@@ -1,0 +1,34 @@
+<form class="tianjiagz" action="" method="post" >
+  <div class="input string optional student_company" style="width:auto;">
+    <label for="">起止年月:</label><input class="disabledjy" disabled type="text" name="" value="<%= workexp.sedate %>">
+  </div>
+  <div class="input string optional student_company" style="width:auto;">
+    <label for="">所在单位:</label><input class="disabledjy" disabled type="text" name="" value="<%= workexp.name %>">
+  </div>
+  <div class="input string optional student_company" style="width:auto;">
+    <label for="">所在地区:</label><input class="disabledjy" disabled type="text" name="" value="<%= workexp.content %>">
+  </div>
+  <div class="input string optional student_company" style="width:auto;">
+    <label for="">备注:</label><input class="disabledjy" disabled type="text" name="" value="<%= workexp.distinct %>">
+  </div>
+  <div class="input string optional student_company" style="width:auto;">
+    <label for="">职务:</label><input class="disabledjy" disabled type="text" name="" value="<%= workexp.duty %>">
+  </div>
+  <input type="button" id="btn" class="gzsc" jilu="<%= workexp.id %>" name="" value="删除">
+</form>
+<script type="text/javascript">
+  $(function(){
+    $(".gzsc").click(function(){
+      gzjl =$(this).attr('jilu');
+      $.ajax({
+        url: '/workexps/'+gzjl,
+        type: 'DELETE',
+        data: {},
+        success: function (jl) {
+          $(".tianjiagz").remove();
+        }
+      });
+
+    });
+  });
+</script>

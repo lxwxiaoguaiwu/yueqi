@@ -1,0 +1,79 @@
+.register-content
+  .left
+    .article
+      .article-title
+        span.rmwz
+          | 相关申请
+        a.ckqb[href="/newslist/wenzhanglist"]
+          | 查看全部
+        a[href=""]
+          img[src="/assets/video/jt.png" height="11" width="11"]
+      ul.article-list
+        - @articles.each do |article|
+          li
+            a[href="/newsdetails/newsdetails/#{article.id}"]
+              = article.title
+            span
+              = article.updated_at.strftime("%m-%d")
+    .video
+      .video-title
+        span.rmwz
+          | 热门视频
+        a.ckqb[href="/newslist/videolist"]
+          | 查看全部
+        a[href=""]
+          img[src="/assets/video/jt.png" height="11" width="11"]
+      ul
+        - @videos.each do |video|
+          li
+            .videoimg
+              = image_tag video.asset.url(:medium)
+            .bottom[style="padding-top: 10px;padding-bottom: 10px;"]
+              span.sks
+                =video.title
+              a.star[href=""]
+                = image_tag("video/star.png")
+              a[href=""]
+                = image_tag("video/sc.png")
+              p
+                =video.written_by
+              a.bf[href=""]
+                = image_tag("video/bf.png")
+              span[style="font-size: 10px;color: #2763af;"]
+                | 112.3万
+  .right
+    ul.right-title
+      li.ynjd
+        | 申请注册办法
+    .grzc
+      span.title
+        | 个人注册办法
+      ul
+        - @registers.each do |register|
+          a[href="/registerdetails/registerdetails/#{register.id}"]
+            li
+              = register.title
+              span
+                = register.updated_at.strftime("%m-%d")
+    .xyzc
+      span.title
+        | 学员注册办法
+      ul
+        - @xueyuanregisters.each do |xueyuanregister|
+          a[href="/registerdetails/registerdetails/#{xueyuanregister.id}"]
+            li
+              = xueyuanregister.title
+              span
+                = xueyuanregister.updated_at.strftime("%m-%d")
+        li.zhu
+          | 注:乐器学员暂不接受社会人士注册申报，如果是12岁以下儿童学员，可由家长代为注册。
+    .jgzc
+      span.title
+        | 机构注册办法
+      ul
+        -@jigouregisters.each do |jigouregister|
+          a[href="/registerdetails/registerdetails/#{jigouregister.id}"]
+            li
+              = jigouregister.title
+              span
+                = jigouregister.updated_at.strftime("%m-%d")

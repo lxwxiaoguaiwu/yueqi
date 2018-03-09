@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>全国乐器教学查询平台</title>
+    <%= csrf_meta_tags %>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <!--<meta name="full-screen" content="yes">-->
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+    <meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://unpkg.com/vue@2.4.4/dist/vue.min.js"></script>
+    <script type="text/javascript" ckharset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&uuid=&pophcol=2&lang=zh"></script>
+    <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+  <body>
+    <%=render "components/header"%>
+    <%=render "components/nav"%>
+    <%= yield %>
+    <%=render "components/contact"%>
+    <%=render "components/footer"%>
+    <script>
+      var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay: 3000,
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+
+        // 如果需要前进后退按钮
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+      });
+    </script>
+    <script type="text/javascript">
+      (function($, window, document, undefined) {
+        //定义分页类
+        function Paging(element, options) {
+          this.element = element;
+          //传入形参
+          this.options = {
+            pageNo: options.pageNo||1,
+            totalPage: options.totalPage,
+            totalSize:options.totalSize,
+            callback:options.callback
+          };
+          //根据形参初始化分页html和css代码
+          this.init();
+        }
+        //对Paging的实例对象添加公共的属性和方法
+        Paging.prototype = {
+          constructor: Paging,
+          init: function() {
+            this.creatHtml();
+            this.bindEvent();
+          },
+          creatHtml: function() {
+            var me = this;
+            var content = "";
+            var current = me.options.pageNo;
+            var total = me.options.totalPage;
+            var totalNum = me.options.totalSize;
+            content += "<a id=\"firstPage\">首页</a><a id='prePage'>上一页</a>";
+            //总页数大于6时候
+            if(total > 6) {
+              //当前页数小于5时显示省略号
+              if(current < 5) {
+                for(var i = 1; i < 6; i++) {
+                  if(current == i) {
+                    content += "<a class='current'>" + i + "</a>";
+                  } else {
+                    content += "<a>" + i + "</a>";
+                  }
+                }
+                content += ". . .";
+                content += "<a>"+total+"</a>";
+              } else {
+                //判断页码在末尾的时候
+                if(current < total - 3) {
+                  for(var i = current - 2; i < current + 3; i++) {
+                    if(current == i) {
+                      content += "<a class='current'>" + i + "</a>";
+                    } else {
+                      content += "<a>" + i + "</a>";
+                    }
+                  }
+                  content += ". . .";
+                  content += "<a>"+total+"</a>";
+                  //页码在中间部分时候
+                } else {
+                  content += "<a>1</a>";
+                  content += ". . .";
+                  for(var i = total - 4; i < total + 1; i++) {
+                    if(current == i) {
+                      content += "<a class='current'>" + i + "</a>";
+                    } else {
+                      content += "<a>" + i + "</a>";
+                    }
+                  }
+                }
+              }
+              //页面总数小于6的时候
+            } else {
+              for(var i = 1; i < total + 1; i++) {
+                if(current == i) {
+                  content += "<a class='current'>" + i + "</a>";
+                } else {
+                  content += "<a>" + i + "</a>";
+                }
+              }
+            }
+            content += "<a id='nextPage'>下一页</a>";
+            content += "<a id=\"lastPage\">尾页</a>";
+            // content += "<span class='totalPages'> 共<span>"+total+"</span>页 </span>";
+            // content += "<span class='totalSize'> 共<span>"+totalNum+"</span>条记录 </span>";
+            me.element.html(content);
+          },
+          //添加页面操作事件
+          bindEvent: function() {
+            var me = this;
+            me.element.off('click', 'a');
+            me.element.on('click', 'a', function() {
+              var num = $(this).html();
+              var id=$(this).attr("id");
+              if(id == "prePage") {
+                if(me.options.pageNo == 1) {
+                  me.options.pageNo = 1;
+                } else {
+                  me.options.pageNo = +me.options.pageNo - 1;
+                }
+              } else if(id == "nextPage") {
+                if(me.options.pageNo == me.options.totalPage) {
+                  me.options.pageNo = me.options.totalPage
+                } else {
+                  me.options.pageNo = +me.options.pageNo + 1;
+                }
+
+              } else if(id =="firstPage") {
+                me.options.pageNo = 1;
+              } else if(id =="lastPage") {
+                me.options.pageNo = me.options.totalPage;
+              }else{
+                me.options.pageNo = +num;
+              }
+              me.creatHtml();
+              if(me.options.callback) {
+                me.options.callback(me.options.pageNo);
+              }
+            });
+          }
+        };
+        //通过jQuery对象初始化分页对象
+        $.fn.paging = function(options) {
+          return new Paging($(this), options);
+        }
+      })(jQuery, window, document);
+    </script>
+    <script>
+      //分页
+      $("#page").paging({
+        pageNo:1,
+        totalPage: 5,
+        totalSize: 300,
+      })
+    </script>
+  </body>
+</html>
+<script type="text/javascript">
+  $(function () {
+      //自适应基础
+      function initFontSize() {
+          var html = document.documentElement;
+          var windowWidth = html.clientWidth;
+          html.style.fontSize = windowWidth / 7.5 + 'px';
+      }
+
+      initFontSize();
+      $(window).resize(function () {
+          initFontSize();
+      });
+  });
+
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').focus()
+  });
+</script>

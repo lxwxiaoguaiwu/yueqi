@@ -1,0 +1,169 @@
+.newslist-right.searchresult
+  .right-title
+    span
+      | 全站搜索结果
+  .news
+    .news-title
+      .t-left
+        span
+          | 新闻
+      .t-right
+        span
+          | 新闻5条
+        span
+          | 显示全部
+        span.glyphicon.glyphicon-chevron-up
+    .list
+      ul
+        - if @resultas.blank?
+          .zhu
+            | 关于“#{@keyword}”的搜索结果共“0”项
+        - else
+          - @resultas.each do |article|
+            li
+              .picture
+                = image_tag("video/adsada_14.png")
+              .new-content
+                .titltbox
+                  a.zuo[href="/newsdetails/newsdetails"]
+                    = article.title
+                  span.you
+                    | 50分钟前 | 评论 1009
+                p
+                  = article.written_by
+                .box
+                  a[href="#"]
+                    | 收藏
+                  .bshare-custom
+                    a.bshare-more.bshare-more-icon.more-style-sharethis[href="#" title="更多平台"]
+  .announ.news
+    .news-title
+      .t-left
+        span
+          | 重要通知
+      .t-right
+        span
+          | 通知7条
+        span
+          | 收起
+        span.glyphicon.glyphicon-chevron-down
+    .list
+      ul.tz
+        - if @resultbs.blank?
+          .zhu
+            | 关于“#{@keyword}”的搜索结果共“0”项
+        - else
+          - @resultbs.each do |proclaim|
+            li
+              a[href="#"]
+                span.wdkj
+                  = proclaim.title
+                span.date
+                  = proclaim.updated_at.strftime("%m-%d")
+  .mingjia.news
+    .news-title
+      .t-left
+        span
+          | 名家推荐
+      .t-right
+        span
+          | 名家7条
+        span
+          | 显示全部
+        span.glyphicon.glyphicon-chevron-up
+    .yzjsx
+      ul.yzj-list
+        - if @results.blank?
+          .zhu
+            | 关于“#{@keyword}”的搜索结果共“0”项
+        - else
+          - @results.each do |mingjium|
+            li.list1
+              .mjtp
+                = image_tag("video/zhangqingshan_05.png")
+              .people
+                a[href="#"]
+                  | 张琴山
+                span
+                  | 所在地区：北京市-海淀区
+                span
+                  | 所属类别：古琴制作师
+                span
+                  | 毕业院校:吉林艺术学院
+              .ylc
+                button[type="button" name="button"]
+                  | 收藏
+                .bshare-custom
+                  a.bshare-more.bshare-more-icon.more-style-sharethis[href="#" title="更多平台"]
+                ul
+                  li
+                    = image_tag("video/ylc_03.png")
+                    span
+                      | 音频:幽兰操
+                  li
+                    = image_tag("video/ylc_03.png")
+                    span
+                      | 音频:幽兰操
+                  li
+                    = image_tag("video/ylc_03.png")
+                    span
+                      | 音频:幽兰操
+  .video.news
+    .news-title
+      .t-left
+        span
+          | 活动视频
+      .t-right
+        span
+          | 视频5条
+        span
+          | 显示全部
+        span.glyphicon.glyphicon-chevron-up
+    .hotvideo
+      ul
+        - if @resultcs.blank?
+          .zhu[style="margin: 0 auto;"]
+            | 关于“#{@keyword}”的搜索结果共“0”项
+        - else
+          - @resultcs.each do |video|
+            li
+              .videoimg
+                a[href="#"]
+                  = image_tag("video/video.png")
+              .bottom
+                span.sks
+                  =video.title
+                a.star[href="#"]
+                  span.glyphicon.glyphicon-star
+                a[href="#"]
+                  = image_tag("video/sc.png")
+                p
+                  =video.written_by
+                a.bf[href="#"]
+                  = image_tag("video/bf.png")
+                span
+                  | 112.3万
+  .announ.news
+    .news-title
+      .t-left
+        span
+          | 教师培训
+      .t-right
+        span
+          | 培训5条
+        span
+          | 显示全部
+        span.glyphicon.glyphicon-chevron-up
+    .list
+      ul.tz
+        - if @resultds.blank?
+          .zhu
+            | 关于“#{@keyword}”的搜索结果共“0”项
+        - else
+          - @resultds.each do |trainning|
+            li
+              a[href="#"]
+                span.wdkj
+                  = trainning.title
+                span.date
+                  = trainning.updated_at.strftime("%m-%d")

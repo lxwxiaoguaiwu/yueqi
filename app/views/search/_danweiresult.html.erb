@@ -1,0 +1,52 @@
+<div class="newslist-right searchresult ">
+  <div class="right-title ">
+    <span>注册单位查询结果</span>
+  </div>
+  <div class="screen">
+    <ul>
+      <li class="pl">排列 :</li>
+      <li class="jb">
+        <span>级别</span>
+        <div class="jiantou">
+          <span class="glyphicon glyphicon-triangle-top"></span>
+          <span class="glyphicon glyphicon-triangle-bottom"></span>
+        </div>
+      </li>
+      <li class="jb">
+        <span>编号</span>
+        <div class="jiantou">
+          <span class="glyphicon glyphicon-triangle-top"></span>
+          <span class="glyphicon glyphicon-triangle-bottom"></span>
+        </div>
+      </li>
+      <li class="sx">筛选 :
+        <input type="text" name="" value="">
+        <%= image_tag("video/adsada_03.png") %>
+        <input type="text" name="" value="">
+        <%= image_tag("video/adsada_05.png") %>
+      </li>
+    </ul>
+  </div>
+  <div class="results">
+    <table>
+      <tr class="ttitle">
+        <th>照片</th>
+        <th>单位名称</th>
+        <th>培训特色</th>
+        <th>单位级别</th>
+        <th>注册编号</th>
+        <th>所在地区</th>
+      </tr>
+      <% @results.each do |orgnization| %>
+        <tr class="tlist" style="height:60px;">
+          <th><img src="/assets/video/mingjia_03.png" alt="" style="height:50px;"></th>
+          <th><p><%= orgnization.name %></p></th>
+          <th>古琴</th>
+          <th>注册单位</th>
+          <th>A025790</th>
+          <th>北京市-海淀</th>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

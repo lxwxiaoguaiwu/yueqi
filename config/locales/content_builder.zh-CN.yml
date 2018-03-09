@@ -1,0 +1,34 @@
+zh-CN:
+  admin:
+    actions:
+      content_builder:
+        title: "创建新闻"
+        menu: "创建新闻"
+        breadcrumb: "创建新闻"
+        delete_block: "你是否要删除这块内容?"
+        success_save: "更新成功"
+        error_save: "更新错误"
+        written_by: "作者"
+        news_source: "新闻来源"
+        summary: "概要"
+        url: "粘贴YouTube链接"
+        invalid_url: "无效URL"
+        image_description: "图片描述"
+        search_content: "搜索内容"
+        delete_block: "你是否删除这块内容？"
+        button:
+          save: "保存"
+          publish: "发布"
+          unpublish: '撤销发布'
+        snippet:
+          text: "文字"
+          image_left: "图片局左对齐"
+          image_right: "图片居右对齐"
+          image_center: "图片居中对齐"
+          video: "视频"
+          blockquote_right: "引言居右对齐"
+          blockquote_left: "引言居左对齐"
+          blockquote_center: "引言居中对齐"
+          related_content_right: "相对内容右侧"
+          related_content_left: "相对内容左侧"
+          gallery: "照片墙"

@@ -1,0 +1,388 @@
+.personalcontent{
+  display: flex;
+}
+.leftnav{
+  width: 170px;
+  background-color: #e5ebef;
+}
+.leftnav a{
+  font-size: 14px;
+  color: #5a5a5a;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 1px;
+  width: 90%;
+  margin: 0 auto;
+}
+.leftnav .sctx{
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.sytp img{
+  width: 65px;
+}
+.leftnav .sctx span{
+  display: block;
+  padding-top: 7px;
+  font-size: 12px;
+  color: #2763af;
+  font-weight: bold;
+  width: 135px;
+  margin: 0 auto;
+}
+.leftnav .list{
+  margin-top: 35px;
+}
+.leftnav .list ul{
+  text-align: center;
+}
+.leftnav .list ul .myli{
+  float: inherit;
+  font-size: 14px;
+  color: #5a5a5a;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 1px;
+  width: 90%;
+  margin: 0 auto;
+}
+.leftnav .list .two{
+  font-size: 12px;
+  margin-left: 20px;
+}
+.personalform{
+  width: 63%;
+  margin: 0 auto;
+}
+.personalform .title{
+  font-size: 22px;
+  color: #3b3b3b;
+  font-weight: bold;
+  text-align: center;
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+  border-bottom: 2px solid;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+.personalform .beizhu{
+  display: flex;
+  width: 63%;
+  margin: 20px auto;
+}
+.personalform .beizhu span{
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 12px;
+}
+.personalform .beizhu p{
+  font-size: 12px;
+  color: #777777;
+  font-weight: bold;
+}
+.personalform .personal-information .grxx{
+  width: 100%;
+  height: 30px;
+  font-size: 14px;
+  background-color: #7eadd5;
+  line-height: 30px;
+  color: #fff;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.personalform .personal-information .jyjl,
+.personalform .personal-information .gzjl{
+  background-color: #c8c8c8;
+}
+.personalform .personal-information form{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.personalform .personal-information form .input{
+  width: 50%;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+.string.optional.disabled.bjjbtn,
+.collection_radio_buttons{
+  margin-top: 10px;
+}
+.personalform .personal-information .zygzjl{
+  background-color: #e6e4e4;
+  padding-top:25px;
+  margin-bottom:20px;
+}
+.personalform .personal-information .zygzjl .button,
+.personalform .personal-information .button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.personalform .personal-information .zygzjl .button button,
+.personalform .personal-information .button button,
+#btn{
+  height: 30px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #f58526;
+  color: #fff;
+}
+.personalform #student_name,
+.personalform #student_minzu{
+  width: 188px;
+}
+.panel-default > .panel-heading{
+  background-color: #e5ebef;
+}
+.panel-group{
+  margin-bottom: 0;
+}
+.panel-heading{
+  padding: 0;
+}
+.panel{
+  border: 0;
+}
+.panel-body{
+  padding: 0;
+}
+.panel-body li a{
+  font-size: 12px;
+  margin-left: 25px;
+}
+.procedure,
+.agreement{
+  width: 665px;
+  margin: 0 auto;
+}
+.procedure .procedure-title,
+.agreement .procedure-title{
+  border-bottom: 1px solid;
+  margin-top: 25px;
+}
+.procedure .procedure-title span,
+.agreement .procedure-title span{
+  background-color: #2763af;
+  width: 265px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 30px;
+  display: block;
+  height: 30px;
+}
+.agreement .procedure-title span{
+  width: 85px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.procedure .procedure-content p,
+.agreement .procedure-content p{
+  text-indent:25px;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+.panel-title{
+  display: inline-flex;
+}
+.glyphicon{
+  line-height: 30px;
+}
+.sqbg{
+  display: flex;
+  justify-content: center;
+}
+.sqlc{
+  display: flex;
+  justify-content: center;
+}
+.sqxy{
+  display: flex;
+  justify-content: center;
+}
+.pen{
+  font-size: 14px;
+  color: #5a5a5a;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+.pen-s{
+  margin-left: 20px;
+}
+.grtab .register .sqzc{
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.leftnav .list .grzzz{
+  display:flex;
+  margin-left:53px;
+}
+#btn{
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.tishi{
+  color: red;
+  padding: 0 10px;
+  margin: 25px 0;
+}
+.xy-title{
+  display: flex;
+  justify-content: space-between;
+}
+.xy-title .tit{
+  line-height: 30px;
+  font-size: 14px;
+  color: #0f4b9b;
+  font-weight: bold;
+}
+.xy-content .tp-tit{
+  background-color: #c8c8c8;
+  height: 25px;
+  line-height: 25px;
+  color: #fff;
+  font-weight: bold;
+}
+.xy-content .tp-tit th{
+  text-align: center;
+}
+.xy-content .jxtj{
+  display: flex;
+  justify-content: flex-end;
+}
+.xy-content #btn1{
+  width: 80px;
+  height: 25px;
+  background-color: #fd8413;
+  border: 0;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: bold;
+  margin: 15px 0 30px 0;
+
+}
+
+.tp1{
+  width: 100px;
+  text-align: center;
+}
+.tp1 img{
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+}
+.tp2{
+  width: 100px;
+  text-align: center;
+}
+.tp3{
+  width: 380px;
+  text-align: center;
+}
+.tp4{
+  width: 150px;
+  text-align: center;
+}
+.tp5{
+  text-align: center;
+}
+.tp-con{
+  border-bottom: 1px solid #c8c8c8;
+  padding: 10px 0;
+}
+.yxxy .lxfs{
+  width: 92%;
+  height: 30px;
+}
+.yxxy .fkyj{
+  width: 92%;
+  height: 150px;
+}
+.yxxy .qing{
+  color: #2763af;
+  margin-left: 65px;
+  margin: 10px 0 0 65px;
+}
+.input.text.optional.opinion_content{
+  display: flex;
+  width: 100%;
+}
+.input.text.optional.opinion_content textarea{
+  width: 92%;
+  height: 150px;
+  margin-left: 1%;
+}
+.input.string.optional.opinion_contact{
+  width: 100%;
+  height: 30px;
+}
+.input.string.optional.opinion_contact input{
+  width: 92%;
+  height: 30px;
+  margin-left: 1%;
+}
+.input.string.optional.eduexp_name,
+.input.string.optional.eduexp_sedate,
+.input.string.optional.eduexp_content{
+  width: auto;
+}
+.input.string.optional.workexp_sedate,
+.input.string.optional.workexp_name,
+.input.string.optional.workexp_content,
+.input.string.optional.workexp_distinct,
+.input.string.optional.workexp_duty{
+  width: auto;
+}
+@media ( orientation: portrait ){
+  .leftnav{
+    width: 20%;
+  }
+  .leftnav a{
+    width: 100%;
+    height: auto;
+  }
+  .leftnav .sctx{
+    width: 100%;
+  }
+  .leftnav .sctx span{
+    width: 100%;
+    text-align: center;
+  }
+  .leftnav .list .grzzz{
+    margin-left:14px;
+  }
+  .pen-s{
+    margin-left: 15px;
+  }
+  .leftnav .list ul .myli,
+  .pen{
+    font-size: 12px;
+  }
+  #bg-s{
+    margin-left: 10px;
+  }
+  .procedure, .agreement{
+    width: 100%;
+  }
+  .personalform{
+    width: 75%;
+  }
+  .personalform .wodexiaoxi ul li span,
+  .personalform .guanzhushoucang ul li span{
+    height: 30px;
+    overflow: hidden;
+  }
+
+}

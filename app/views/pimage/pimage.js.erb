@@ -1,0 +1,9 @@
+<% if @pimage.valid?%>
+
+  $("#pimage").prepend("<%=j render(:partial => "pimage"), :locals => { :pimage => @pimage })%>");
+
+<% else %>
+
+  alert("validation failed!");
+
+<% end %>

@@ -1,0 +1,115 @@
+.ww
+  .information
+    .w
+      ul.information-title
+        li
+          | 详细信息
+      div[style="display:flex;margin-top:15px;"]
+          .photo
+            = image_tag @mingjiums.asset.url(:medium)
+            span
+              | 安菁华 吉他演奏家
+            - if @action
+              a href="/"
+                |已关注
+            - else
+              = link_to "关注","/guanzhu/guanzhu/#{@mingjiums.id}", :id => "gz",remote:true
+          .self
+            span
+              | 姓名：
+              =@mingjiums.title
+            span
+              | 性别:
+              =@mingjiums.sex
+            span
+              | 所在地：
+              =@mingjiums.suozaidi
+            span
+              | 乐种：
+              =@mingjiums.yuezhong
+            span
+              | 注册院校：
+              =@mingjiums.zhuceyuanxiao
+            span
+              | 资格证书：
+              =@mingjiums.zigezhengshu
+            span
+              | 个人简介:
+              =@mingjiums.gerenjianjie
+    span.item.dot-top
+  .achievement
+    .w
+      .achievement-title
+        ul.nav.nav-tabs
+          li.grcj.active
+            a href="#home" data-toggle="tab"
+              | 个人成就
+          li.zz
+            a href="#zhuzuo" data-toggle="tab"
+              | 著作
+          li.hj
+            a href="#huojiang" data-toggle="tab"
+              | 演出及获奖
+        .tab-content
+          .tab-pane.fade.in.active#home
+            .achievement-content
+                .photo
+                  = image_tag("video/mingjia_07.png")
+                .words
+                  span
+                    | 个人成就：
+                  p
+                    =@mingjiums.gerenchengjiu
+          .tab-pane.fade.in#zhuzuo
+            .achievement-content
+                .photo
+                  = image_tag("video/mingjia_07.png")
+                .words
+                  span
+                    | 著作：
+                  p
+                    =@mingjiums.gerenchengjiu
+          .tab-pane.fade.in#huojiang
+            .achievement-content
+                .photo
+                  = image_tag("video/mingjia_07.png")
+                .words
+                  span
+                    | 演出及获奖：
+                  p
+                    =@mingjiums.gerenchengjiu
+  .audioandvideo
+    .w
+      .audioandvideo-title
+        span.zs
+          | 音频视频展示
+        div
+          span
+            | 视频15个
+          span
+            | 显示全部
+          = image_tag("video/adsada_05.png")
+      div[style="position:relative;"]
+        .videos-list
+          ul
+            - @videos.each do |video|
+              li
+                = image_tag video.asset.url(:medium)
+                .bottom
+                  span.sks
+                    = video.title
+                  a.star[href=""]
+                    = image_tag("video/star.png")
+                  a[href=""]
+                    = image_tag("video/sc.png")
+                  p
+                    = video.title
+                  a.bf[href=""]
+                    = image_tag("video/bf.png")
+                  span[style="font-size: 10px;color: #2763af;"]
+                    | 112.3万
+          .btns
+            a.prev-btn.J-prev-btn.btn[href=" "]
+              | <
+            a.next-btn.J-next-btn.btn[href="javascript:;"]
+              | >

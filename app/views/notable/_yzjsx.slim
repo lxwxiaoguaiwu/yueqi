@@ -1,0 +1,41 @@
+.yzjsx
+    .yzj-title
+      span
+        | 演奏家筛选
+    ul.yzj-list
+      - @mingjiums.each do |mingjia|
+        li.list1
+          .mjtp
+            = image_tag mingjia.asset.url(:medium)
+          .people
+            a.zqs[href="/notabledetails/notabledetails/#{mingjia.id}"]
+              = mingjia.title
+            span
+              | 所在地区：
+              = mingjia.suozaidi
+            span
+              | 所属类别：
+              = mingjia.yuezhong
+            span
+              | 毕业院校:
+              = mingjia.college.name
+          .ylc
+            .mjbox
+
+              .bshare-custom
+                a.bshare-more.bshare-more-icon.more-style-sharethis[title="更多平台"]
+            ul[style="display: flex;margin-top: 5%"]
+              li
+                = image_tag("video/ylc_03.png")
+                span[style="font-size: 10.7px;color: #5a5a5a;display: block"]
+                  | 音频:幽兰操
+              li[style="margin: 0 1%"]
+                = image_tag("video/ylc_03.png")
+                span[style="font-size: 10.7px;color: #5a5a5a;display: block"]
+                  | 音频:幽兰操
+              li
+                = image_tag("video/ylc_03.png")
+                span[style="font-size: 10.7px;color: #5a5a5a;display: block"]
+                  | 音频:幽兰操
+    div[value="1 0"]
+    #page.page_div

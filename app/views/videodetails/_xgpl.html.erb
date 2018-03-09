@@ -1,0 +1,32 @@
+<div class="ww">
+  <div class="xgpl">
+    <div class="w">
+      <ul class="xgpl-title">
+        <li class="pl">相关评论</li>
+        <li class="tj">相关推荐</li>
+      </ul>
+      <div class="xgpl-content">
+        <div class="fbpl">
+          <div class="xgxw fbpl">
+            <span>发表评论</span>
+            <%= simple_form_for(@comment, url: "/comments?cid=#{@news.id}",:remote=>true) do |f| %>
+              <%= f.text_area :body,:rows=>"8", :cols=>"80", required: false, autofocus: true, :placeholder => "发表评论" %>
+              <%= f.button :submit, "发表评论"%>
+            <% end %>
+          </div>
+        </div>
+        <div class="zxpl">
+          <div class="titlebox">
+            <span class="zx">最新评论</span>
+            <span>评论 144</span>
+          </div>
+          <div id="comments" class="xgxw zxpl">
+            <% @comments.each do |c|%>
+              <%= render :partial => "comments/comment", :locals => { :comment => c } %>
+            <%end%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

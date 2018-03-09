@@ -1,0 +1,36 @@
+<div class="xy-content">
+  <table>
+    <tbody style="display:flex;flex-direction: column;">
+      <tr class="tp-tit">
+        <th class="tp1">视频地址</th>
+        <th class="tp2">视频标题</th>
+        <th class="tp3">视频简介</th>
+        <th class="tp4">视频状态</th>
+        <th class="tp5">操作</th>
+      </tr>
+      <tr class="tp-con" style="display: flex;">
+        <td class="tp1" title="<%= pvideo.source%>" style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;"><a href="<%= pvideo.source%>"><%= pvideo.source%></a></td>
+        <td class="tp2"><%= pvideo.title %></td>
+        <td class="tp3"><%= pvideo.desc %></td>
+        <td class="tp4">已上传</td>
+        <td class="tp5" id="videl" vijilu="<%= pvideo.id%>">删除</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<script type="text/javascript">
+  $(function(){
+    $("#videl").click(function(){
+      vijilu =$(this).attr('vijilu');
+      $.ajax({
+        url: '/pvideos/'+vijilu,
+        type: 'DELETE',
+        data: {},
+        success: function (res) {
+          $(".tp-con").remove();
+        }
+      });
+
+    });
+  });
+</script>

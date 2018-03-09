@@ -1,0 +1,9 @@
+<% if @comment.valid? %>
+
+  $("#comments").prepend("<%=j render(:partial => "comment", :locals => { :comment => @comment })%>");
+
+<% else %>
+
+  alert("validation failed!");
+
+<% end %>

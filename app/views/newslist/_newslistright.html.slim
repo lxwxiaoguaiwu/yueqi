@@ -1,0 +1,152 @@
+.newslist-right
+  ul.right-title.nav.nav-tabs
+    li#home.ynjd onclick="getSearch()"
+      a href="#home" data-toggle="tab"
+        | 业内焦点
+    li#exchange.zwjl onclick="getSearch1()"
+      a href="#exchange" data-toggle="tab"
+        | 中外交流
+    li#association.xhxw onclick="getSearch2()"
+      a href="#association" data-toggle="tab"
+        | 协会新闻
+  .tab-content
+    .tab-pane.fade.in.active#home
+      .screen
+        ul
+          li.pl
+            | 排列 :
+          li.time
+            | 时间
+          li.xs
+            | 显示 :
+            input[type="text"]
+            img[src="/assets/newslist/adsada_03.png" alt=""]
+          li.sx
+            | 筛选 :
+            input[type="text"]
+            = image_tag("video/adsada_03.png")
+            input[type="text"]
+            = image_tag("video/adsada_05.png")
+      .list
+        ul[style="width: 100%;margin-left: 0;"]
+          - @articles.each do |article|
+            li
+              .picture
+                = image_tag article.asset.url(:medium)
+              .new-content
+                .titltbox
+                  a.zuo[href="/newsdetails/newsdetails/#{article.id}" aria-label="Previous"]
+                    =article.title
+                  .you[style="display: flex;justify-content: flex-end;"]
+                    .yuedu
+                      | 阅读：
+                      = article.likes_count
+                    .pinglun
+                      | |评论：1009
+                p
+                  =article.written_by
+                .box
+                  = link_to "收藏","post/star"
+                  .bshare-custom
+                    a.bshare-more.bshare-more-icon.more-style-sharethis[title="更多平台"]
+    .tab-pane.fade.in#exchange
+      .screen
+        ul
+          li.pl
+            | 排列 :
+          li.time
+            | 时间
+          li.xs
+            | 显示 :
+            input[type="text"]
+            = image_tag("video/adsada_03.png")
+          li.sx
+            | 筛选 :
+            input[type="text"]
+            = image_tag("video/adsada_03.png")
+            input[type="text"]
+            = image_tag("video/adsada_05.png")
+      .list
+        ul
+          - @articles.each do |article|
+            li
+              .picture
+                = image_tag("video/adsada_14.png")
+              .new-content
+                a.zuo[href="/newsdetails/newsdetails/#{article.id}" aria-label="Previous"]
+                  =article.title
+                span.you
+                  | 50分钟前 | 评论 1009
+                p
+                  =article.written_by
+                .box
+                  button
+                    | 已藏
+                  .bshare-custom
+                    a.bshare-more.bshare-more-icon.more-style-sharethis[title="更多平台"]
+    .tab-pane.fade.in#association
+      .screen
+        ul
+          li.pl
+            | 排列 :
+          li.time
+            | 时间
+          li.xs
+            | 显示 :
+            input[type="text"]
+            = image_tag("video/adsada_03.png")
+          li.sx
+            | 筛选 :
+            input[type="text"]
+            = image_tag("video/adsada_03.png")
+            input[type="text"]
+            = image_tag("video/adsada_05.png")
+      .list
+        ul
+          - @articles.each do |article|
+            li
+              .picture
+                = image_tag("video/adsada_14.png")
+              .new-content
+                a.zuo[href="/newsdetails/newsdetails/#{article.id}" aria-label="Previous"]
+                  =article.title
+                span.you
+                  | 50分钟前 | 评论 1009
+                p
+                  =article.written_by
+                .box
+                  button
+                    | 已藏
+                  .bshare-custom
+                    a.bshare-more.bshare-more-icon.more-style-sharethis[title="更多平台"]
+    div[value="1 0"]
+    #page.page_div
+
+
+javascript:
+  function getSearch()
+  {
+
+    var keyword=document.getElementById("home")
+    window.location.href="/newslist/newslist#home?keyword="+keyword.id;
+    $('#home').addClass('active');
+    $('#association').removeClass('active');
+    $('#exchange').removeClass('active');
+  }
+  function getSearch1()
+  {
+    var keyword=document.getElementById("exchange")
+    window.location.href="/newslist/newslist#exchange?keyword="+keyword.id;
+    $('#exchange').addClass('active');
+    $('#home').removeClass('active');
+    $('#association').removeClass('active');
+  }
+  function getSearch2()
+  {
+
+    var keyword=document.getElementById("association")
+    window.location.href="/newslist/newslist#association?keyword="+keyword.id;
+    $('#association').addClass('active');
+    $('#exchange').removeClass('active');
+    $('#home').removeClass('active');
+  }

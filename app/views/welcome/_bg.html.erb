@@ -1,0 +1,32 @@
+<div class="bg">
+  <div class="bg-title">
+    <span class="cn">全国乐器教学查询平台</span>
+    <span class="en">The national musical instrument teaching search platform</span>
+  </div>
+  <div class="chaxun">
+    <div class="btnbox">
+      <input id="keyword" type="text" value="">
+      <select id="sele" class="selector">
+        <option  value="0">注册教师</option>
+        <option  value="1">注册个人</option>
+        <option  value="2">注册单位</option>
+      </select>
+      <a  class="cx" href="#" onclick="getValue();" >查询</a>
+    </div>
+    <span class="zhu">注：任意输入以上一项内容即可查询，不可多项内容同时查询</span>
+  </div>
+  <span class="item dot-top"></span>
+</div>
+
+
+<script type="text/javascript">
+function getValue(){
+  var keyword=document.getElementById("keyword")
+  var ptype = document.getElementById("sele")
+  if(ptype.value == '2'){
+    window.location.href="/search/danwei?keyword="+keyword.value+"&ptype="+ptype.value;
+  } else {
+    window.location.href="/search/index?keyword="+keyword.value+"&ptype="+ptype.value;
+  }
+}
+</script>

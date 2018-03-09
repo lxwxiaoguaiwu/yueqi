@@ -1,0 +1,32 @@
+<div class="right">
+  <div class="conse">
+    <div class="">
+      <div class="" id="home">
+        <div class="mypagecontent" id="mypage">
+          <div class="mypagecontent-title">
+            <span>意见反馈</span>
+          </div>
+          <div class="yxxy">
+            <span>您好，您有任何问题都可以在此留下建议和意见，我们将在一周内回复您。</span>
+            <%= simple_form_for @opinions do |f| %>
+            <form class="" action="index.html" method="post">
+              <div class="" style="display:flex;margin:20px 0;">
+                <%= f.input :content %>
+              </div>
+              <div class="" style="display:flex;">
+                <%= f.input :contact, placeholder: '405647234@qq.com' %>
+              </div>
+              <div class="qing">请填写您最易于联络的方式，将有助于我们及时与您沟通处理结果</div>
+              <div class="xy-content">
+                <div class="jxtj">
+                  <%= f.button:submit, value: '提交反馈', :id => "btn1"%>
+                </div>
+              </div>
+            </form>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

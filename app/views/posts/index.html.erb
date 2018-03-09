@@ -1,0 +1,9 @@
+<article>
+  <% @news.each do |content|%>
+    <h1><%= content.title %></h1>
+    <p>
+      <%= content.written_by %>
+    </p>
+    <%= content.content_sanitized %>
+  <%end%>
+</article>

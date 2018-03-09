@@ -1,0 +1,2 @@
+class Zhuce < ApplicationRecord
+end

@@ -1,0 +1,29 @@
+<form class="tianjijl" action="" method="post" >
+  <div class="input string optional student_company" style="width:auto;">
+    <label for="">主要教育经历:</label><input class="disabledjy" disabled type="text" name="" value="<%= eduexp.name %>">
+  </div>
+  <div class="input string optional student_company" style="width:auto;">
+    <label for="">起止年月:</label><input class="disabledjy" disabled type="text" name="" value="<%= eduexp.sedate %>">
+  </div>
+  <div class="input string optional student_company" style="width:auto;">
+    <label for="">专业内容:</label><input class="disabledjy" disabled type="text" name="" value="<%= eduexp.content %>">
+  </div>
+  <input type="button" id="btn" class="jysc" jilu="<%= eduexp.id %>" name="" value="删除">
+</form>
+
+<script type="text/javascript">
+  $(function(){
+    $(".jysc").click(function(){
+      jilu =$(this).attr('jilu');
+      $.ajax({
+        url: '/eduexps/'+jilu,
+        type: 'DELETE',
+        data: {},
+        success: function (res) {
+          $(".tianjijl").remove();
+        }
+      });
+
+    });
+  });
+</script>

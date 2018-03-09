@@ -1,0 +1,427 @@
+.screen .screen-title{
+    width: 920px;
+    margin: 0 auto;
+}
+.screen .screen-title ul{
+    display: flex;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+    border-bottom: 1px solid #898989;
+    margin-top: 4%;
+}
+.screen .screen-title li{
+    width: 80px;
+}
+.screen .screen-title .zzs{
+    margin: 0 5%;
+    color: #0063b3;
+    background-color: #ffffff;
+}
+.screen .screen-title .yxjs{
+    color: #0063b3;
+    background-color: #ffffff;
+}
+.screen .screen-content{
+    width: 920px;
+    border: 1px solid #9d9d9d;
+    margin-top: 2%;
+}
+.screen .screen-content .content-title{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e9e9e9;
+    width: 842px;
+    height: 50px;
+    margin-left: 4%;
+}
+.screen .screen-content .sxbq{
+    width: 70px;
+    height: 20px;
+    background-color: #2763af;
+    color: #ffffff;
+    margin-top: 2%;
+    line-height: 20px;
+    text-align: center;
+}
+.screen .screen-content .qc{
+    width: 90px;
+    height: 20px;
+    background-color: #ff7e38;
+    margin-top: 2%;
+    color: #ffffff;
+    line-height: 20px;
+    text-align: center;
+}
+.screen .screen-content .ysfl ,
+.screen .screen-content .jg,
+.screen .screen-content .byyx,
+.screen .screen-content .xhhy{
+    width: 842px;
+    margin-left: 4%;
+    line-height: 27px;
+}
+.screen .screen-content .ysfl span,
+.screen .screen-content .jg span,
+.screen .screen-content .byyx span,
+.screen .screen-content .xhhy span{
+    color: #2763af;
+    font-size: 12px;
+    font-weight: bold;
+}
+.screen .screen-content a{
+    color: #5a5a5a;
+    font-size: 12px;
+    margin-right: 5px;
+    cursor:pointer;
+}
+.screen .screen-content .mjcx{
+    width: 842px;
+    height: 30px;
+    margin: 5px;
+    margin-left: 4%;
+    background-color: #7eadd5;
+}
+.screen .screen-content .mjcx span{
+    color: #ffffff;
+    line-height: 30px;
+}
+.yzjsx{
+    width: 565px;
+    margin-top: 1%;
+}
+.yzjsx .yzj-title{
+    height: 30px;
+    background-color: #7eadd5;
+}
+.yzjsx .yzj-title span{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5%;
+    line-height: 30px;
+}
+.yzjsx .yzj-list .list1{
+    display: flex;
+    margin-top: 3%;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 15px;
+}
+.yzjsx .yzj-list .list1 .mjtp img{
+    width: 135px;
+}
+.yzjsx .yzj-list .list1 .people{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    font-size: 12px;
+    color: #5a5a5a;
+    line-height: 22px;
+    margin-left: 3%;
+}
+.yzjsx .yzj-list .list1 .zqs{
+    font-size: 14px;
+    font-weight: bold;
+}
+.yzjsx .yzj-list .list1 button{
+    width: 58px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: #ebeaea;
+    margin-left: 64%;
+}
+.yzjsx .yzj-list li .ylc{
+    width: 235px;
+    margin-left: 8%;
+}
+.yzjsx .yzj-list li .ylc .mjbox{
+  display: flex;
+  justify-content: flex-end;
+}
+.yzjtj{
+    width: 320px;
+    margin-left: 2.5%;
+    margin-top: 1%;
+}
+.yzjtj .yzjtj-title{
+    border-bottom: 1px solid #e0e0e0;
+}
+.yzjtj ul li .ylc{
+  display: flex;
+  margin-top: 20%;
+}
+.yzjtj .yzjtj-title span{
+    display: block;
+    background-color: #2763af;
+    color: #ffffff;
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+}
+.yzjtj ul li{
+    width: 320px;
+    height: 135px;
+    background-color: #f5f5f5;
+    display: flex;
+}
+.yzjtj ul li .mjtp img{
+  width: 95px;
+}
+.yzjtj ul li .people{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    font-size: 12px;
+    color: #5a5a5a;
+    line-height: 22px;
+    margin-left: 3%;
+}
+.yzjtj ul li button{
+    width: 58px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: #ebeaea;
+}
+.yzjtj ul li .zqs{
+    margin-top: 5%;
+    margin-left: 2%;
+}
+.yzjtj ul li .sc{
+    margin-top: 31%;
+}
+.yzjsx nav ul{
+    margin-left: 24%;
+    margin-top: 10%;
+}
+.information{
+  width: 100%;
+  background-color: #f0efef;
+  padding-top: 30px;
+}
+.information .information-title{
+  border-bottom: 1px solid #6c6c6c;
+}
+.information .information-title li{
+  width: 75px;
+  height: 30px;
+  background-color: #2763af;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+}
+.information .self{
+  width: 555px;
+  height: auto;
+}
+.information .self span{
+  display: block;
+  line-height: 19px;
+  font-size: 12px;
+  color: #474747;
+  letter-spacing: 0.5px;
+}
+.information .photo{
+  flex: 1;
+}
+.information .photo span{
+  margin-top: 10px;
+  display: block;
+  padding-bottom: 10px;
+}
+.information .dot-top{
+  margin-top: 15px;
+  border-bottom-color: #fff;
+}
+.achievement .achievement-title ul{
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1px solid #6c6c6c;
+  color: #2763af;
+  margin-top: 30px;
+}
+.achievement .achievement-title ul .grcj{
+  width: 75px;
+}
+.achievement .achievement-title ul .zz{
+  width: 75px;
+}
+.achievement .achievement-title ul .hj{
+  width: 97px;
+}
+.achievement .achievement-content{
+  display: flex;
+  margin-top: 20px;
+  padding-bottom: 55px;
+}
+.achievement .achievement-content .photo{
+  margin: 0 auto;
+  width: 268px;
+}
+.achievement .achievement-content .words{
+  width: 490px;
+  margin-left: 20px;
+  line-height: 20px;
+}
+.achievement .achievement-content .words span{
+  font-size: 14px;
+  font-weight: bold;
+}
+.achievement .achievement-content .words p{
+  text-indent: 25px;
+  margin-top: 25px;
+  color: #474747;
+  font-size: 12px;
+}
+.audioandvideo{
+  background-color: #f5f5f5;
+}
+.audioandvideo .audioandvideo-title{
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+  justify-content: space-between;
+  border-bottom: 1px solid #6c6c6c;
+}
+.audioandvideo .audioandvideo-title .zs{
+  width: 107px;
+  background-color: #2763af;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+.videos-list {
+  width: 796px;
+  height: 245px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.videos-list ul {
+  width: 3600px;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.videos-list ul li {
+  float: left;
+  width: 199px;
+  height: 200px;
+  background-color: #fff;
+  margin-left: 3px;
+}
+
+.videos-list ul li .yinpin3 {
+    width: 199px;
+    height: 125px;
+}
+.audioandvideo .videos-list .btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -70px;
+    display: block;
+    width: 22px;
+    height: 140px;
+    line-height: 140px;
+    background: gray;
+    background: rgba(0,0,0,.2);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#32000000,endColorstr=#32000000);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#32000000,endColorstr=#32000000);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: simsun;
+    color: #fff;
+    text-decoration: none;
+}
+.audioandvideo .videos-list .prev-btn{
+  left: 0;
+}
+.audioandvideo .videos-list .next-btn {
+    right: 0;
+    background-color: #7eadd5;
+}
+.currr{
+  background-color: red;
+}
+.nocontent{
+  width: 920px;
+  margin: 0 auto;
+}
+@media ( orientation: portrait ){
+  .screen{
+    width: 95%;
+    margin: 0 auto;
+  }
+  .nocontent{
+    width: 95%;
+    margin: 0 auto;
+  }
+  .screen-content{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .screen .screen-title,
+  .screen .screen-content .mjcx {
+    width: 100%;
+    margin-left: 0;
+  }
+  .screen .screen-content{
+    width: 100%;
+    margin-left: 0;
+    height: auto;
+  }
+  .screen .screen-content .content-title {
+    width: 100%;
+    margin: 0;
+  }
+  .screen .screen-content .ysfl,
+  .screen .screen-content .jg,
+  .screen .screen-content .byyx,
+  .screen .screen-content .xhhy {
+    margin-left: 0;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .yzjsx {
+    display: none;
+  }
+  .yzjtj{
+    margin-left: 0;
+    width: 100%;
+  }
+  .yzjtj ul li{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .yzjtj ul li button {
+    margin-top: 7%;
+  }
+  .yzjtj ul li .sc{
+    margin-top: 32px;
+  }
+  .achievement .achievement-content{
+    display: block;
+  }
+  .audioandvideo{
+    display: none;
+  }
+  .information .self{
+    width: 64%;
+  }
+  .achievement .achievement-content .words{
+    width: 100%;
+    margin-left: 0;
+  }
+}

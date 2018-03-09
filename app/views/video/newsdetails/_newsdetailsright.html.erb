@@ -1,0 +1,60 @@
+<div class="newslist-right">
+  <ul class="right-title">
+    <li class="ynjd">业内焦点</li>
+  </ul>
+  <article>
+    <div class="newsdetails-title">
+        <span><%= @news.title %></span>
+        <div class="fb">
+          <%= @news.written_by %>
+        </div>
+        <div class="share">
+          <div class="box">
+            <button type="button" name="button">已藏</button>
+            <div style="line-height:24px;margin-left:50px;">分享: </div>
+            <ul>
+              <li><img src="/assets/video/fenxiang_03.png" alt=""></li>
+              <li><img src="/assets/video/fenxiang_05.png" alt=""></li>
+              <li><img src="/assets/video/fenxiang_08.png" alt=""></li>
+              <li><img src="/assets/video/fenxiang_10.png" alt=""></li>
+              <li><img src="/assets/video/fenxiang_13.png" alt=""></li>
+            </ul>
+          </div>
+        </div>
+        <%= @news.content_sanitized %>
+    </div>
+  </article>
+  <div class="xgxw">
+    <span>相关新闻：</span>
+    <ul>
+      <li class="syp"><a href="#">上一篇：中国文化中心助阵贝宁国际乐器节</a></li>
+      <li class="xyp"><a href="#">下一篇：海峡两岸 乐器教育交流</a></li>
+    </ul>
+  </div>
+  <div class="xgxw fbpl">
+    <span>发表评论</span>
+    <textarea name="name" rows="8" cols="80"></textarea>
+    <button type="button" name="button">发表评论</button>
+  </div>
+  <div class="xgxw zxpl">
+    <div class="" style="display:flex;">
+      <span class="pl">最新评论</span>
+      <span class="num">评论 114</span>
+    </div>
+    <div class="nc" style="display:flex">
+      <div style="flex:1;font-weight: bold;">昵称：江苏省苏州市手机网友</div>
+      <div class="">2017-05-01 09:05:08</div>
+    </div>
+    <p>地点和交通：会谈在会谈环节，将会聚焦两位来自不同的地域和文化背景的艺术家，他们通常在法国工作。</p>
+    <div class="nc" style="display:flex">
+      <div style="flex:1;font-weight: bold;">昵称：江苏省苏州市手机网友</div>
+      <div class="">2017-05-01 09:05:08</div>
+    </div>
+    <p>地点和交通：会谈在会谈环节，将会聚焦两位来自不同的地域和文化背景的艺术家，他们通常在法国工作：梅特（丹麦乐器家、编导）.</p>
+    <div class="nc" style="display:flex">
+      <div style="flex:1;font-weight: bold;">昵称：江苏省苏州市手机网友</div>
+      <div class="">2017-05-01 09:05:08</div>
+    </div>
+    <p>地点和交通：会谈在会谈环节，将会聚焦两位来自不同的地域和文化背景的艺术家，他们通常在法国工作：梅特（丹麦乐器家、编导）.</p>
+  </div>
+</div>

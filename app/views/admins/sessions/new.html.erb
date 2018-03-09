@@ -1,0 +1,18 @@
+<div class="sgin">
+  <div class="title">
+    <p>网站管理系统登录</p>
+  </div>
+  <div class="content">
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email, label:"邮箱",required: false, autofocus: true %>
+        <%= f.input :password,label:"密码", required: false %>
+        <%= f.input :remember_me, label:"记住账号",as: :boolean if devise_mapping.rememberable? %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "登录" %>
+      </div>
+    <% end %>
+  </div>
+</div>

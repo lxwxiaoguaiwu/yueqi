@@ -1,0 +1,135 @@
+<div class="right">
+  <div class="conse">
+    <div class="">
+      <div class="" id="home">
+        <div class="mypagecontent" id="mypage">
+          <div class="mypagecontent-title">
+            <span>个人展示</span>
+          </div>
+          <div class="wodexiaoxi">
+            <div class="xiaoxi-title">
+              <div class="xx">我的图片</div>
+            </div>
+          </div>
+          <div class="tishi">
+            <p>提示：您提交的图片将展示在个人页面</p>
+          </div>
+          <div class="yxxy">
+            <div class="xy-title">
+              <div class="tit">优秀学员(学生获奖情况)</div>
+              <div class="">
+                <a data-toggle="modal" data-backdrop="false" data-target="#myModal2" href="#">我要上传</a>
+                <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">优秀学员(学生获奖情况)</h4>
+                      </div>
+                      <%= simple_form_for @pimage, :url => "/pimages?leibie=1",remote: true do |form| %>
+                        <div class="modal-body">
+                          <div class="row">
+                            <div class="col-md-12" style="margin-bottom: 20px;"><%= form.input :asset, label: '图片',as: :file %></div>
+                            <div class="col-md-12" style="margin-bottom: 20px;"><img id="ppreview"  style="width:100px;height:80px;"></div>
+                            <div class="col-md-12" style="margin-bottom: 20px;">
+                              <%= form.input :title, label: '图片标题'%>
+                            </div>
+                            <div class="col-md-12">
+                              <%= form.input :desc, label: '图片简介'%>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                          <%= form.button :submit, "上传", class: "btn btn-primary" %>
+                        </div>
+                      <% end %>
+                      <script>
+                        document.getElementById('pimage_asset').onchange = function(){
+                          if(this.files.length===0){
+                            document.getElementById('ppreview').src = '';
+                            return;
+                          }
+                          var fr = new FileReader();
+                          fr.onload = function(e){
+                            document.getElementById('ppreview').src = e.target.result;
+                          };
+                          fr.readAsDataURL(this.files[0]);
+                        };
+                      </script>
+                    </div>
+                  </div>
+                </div>
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </div>
+            </div>
+            <div id="pimage" class="pimage">
+              <% @pimages.each do |c|%>
+                <% if c.leibie=="1"%>
+                  <%= render :partial => "pimage/pimage", :locals => { :pimage => c } %>
+                <%end%>
+              <%end%>
+            </div>
+          </div>
+          <div class="ywcj">
+            <div class="xy-title">
+              <div class="tit">业务成就及获奖情况(演出及比赛)</div>
+              <div class="">
+                <a data-toggle="modal" data-backdrop="false" data-target="#myModal1" href="#">我要上传</a>
+                <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">业务成就及获奖情况(演出及比赛)</h4>
+                      </div>
+                      <%= simple_form_for @pimage,:url => "/pimages?leibie=2", remote: true do |form| %>
+                        <div class="modal-body">
+                          <div class="row">
+                            <div class="col-md-12" style="margin-bottom: 20px;"><%= form.input :asset, label: '图片',as: :file %></div>
+                            <div class="col-md-12" style="margin-bottom: 20px;"><img id="ppreview"  style="width:100px;height:80px;"></div>
+                            <div class="col-md-12" style="margin-bottom: 20px;">
+                              <%= form.input :title, label: '图片标题'%>
+                            </div>
+                            <div class="col-md-12">
+                              <%= form.input :desc, label: '图片简介'%>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                          <%= form.button :submit, "上传", class: "btn btn-primary" %>
+                        </div>
+                      <% end %>
+                      <script>
+                        document.getElementById('pimage_asset').onchange = function(){
+                          if(this.files.length===0){
+                            document.getElementById('ppreview').src = '';
+                            return;
+                          }
+                          var fr = new FileReader();
+                          fr.onload = function(e){
+                            document.getElementById('ppreview').src = e.target.result;
+                          };
+                          fr.readAsDataURL(this.files[0]);
+                        };
+                      </script>
+                    </div>
+                  </div>
+                </div>
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </div>
+            </div>
+            <div id="pimage" class="pimage">
+              <% @pimages.each do |c|%>
+                <% if c.leibie=="2"%>
+                  <%= render :partial => "pimage/pimage", :locals => { :pimage => c } %>
+                <%end%>
+              <%end%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

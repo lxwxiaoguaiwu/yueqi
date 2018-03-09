@@ -1,0 +1,161 @@
+<div class="w personalcontent">
+  <div class="leftnav">
+    <div class="sctx">
+      <a data-toggle="modal" data-backdrop="false" data-target="#myModal" href="#">
+        <%= image_tag @user.asset.url(:medium), :class => "img-circle"%>
+      </a>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">上传头像</h4>
+            </div>
+            <%= simple_form_for @user, url: "users/#{current_user.id}" , remote: true do |form| %>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-4"><%= form.input :asset, label: '头像',as: :file %></div>
+                  <div class="col-md-8"><img id="preview"  style="width:360px;height:240px;"></div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <%= form.button :submit, "保存头像", class: "btn btn-primary" %>
+              </div>
+            <% end %>
+            <script>
+            document.getElementById('user_asset').onchange = function(){
+              if(this.files.length===0){
+                document.getElementById('preview').src = '';
+                return;
+              }
+              var fr = new FileReader();
+              fr.onload = function(e){
+                document.getElementById('preview').src = e.target.result;
+              };
+              fr.readAsDataURL(this.files[0]);
+            };
+            </script>
+          </div>
+        </div>
+      </div>
+      <span class="nicheng">昵称：1834632332</span>
+    </div>
+    <div class="list">
+      <ul>
+        <%= link_to("/user/userpage", :remote=>true) do %>
+          <li class="myli">我的首页</li>
+        <%end%>
+      </ul>
+      <div class="grzzz">
+        <div class="pen" id="gr">个人展示</div>
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </div>
+      <ul class="pen-s" id="gr-s" style="display: none">
+        <%= link_to("/user/userinfo", :remote=>true) do %>
+          <li class="myli">个人信息</li>
+        <%end%>
+        <%= link_to("/user/userimg", :remote=>true) do %>
+          <li class="myli">我的图片</li>
+        <%end%>
+        <%= link_to("/user/uservideo", :remote=>true) do %>
+          <li class="myli">音频视频</li>
+        <%end%>
+        <%= link_to("/user/userarticle", :remote=>true) do %>
+          <li class="myli">我的文章</li>
+        <%end%>
+      </ul>
+      <ul>
+        <%= link_to("/user/follow", :remote=>true) do %>
+          <li class="myli">关注收藏</li>
+        <%end%>
+      </ul>
+      <ul>
+        <%= link_to("/user/usernews", :remote=>true) do %>
+          <li class="myli">我的消息</li>
+        <%end%>
+      </ul>
+      <ul>
+        <%= link_to("/user/opinion", :remote=>true) do %>
+          <li class="myli">意见反馈</li>
+        <%end%>
+      </ul>
+      <div class="grzzz">
+        <div class="pen" id="sq">申请注册</div>
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </div>
+      <ul class="pen-s" id="sq-s" style="display: none">
+        <%= link_to("/user/process", :remote=>true) do %>
+          <li class="myli">申请流程</li>
+        <%end%>
+        <%= link_to("/user/agreement", :remote=>true) do %>
+          <li class="myli">申请协议</li>
+        <%end%>
+        <div class="grzzz3">
+          <div class="pen" id="bg">申请表格</div>
+        </div>
+        <ul class="pen-s" id="bg-s" style="display: block">
+          <%= link_to("/user/table", :remote=>true) do %>
+            <li class="myli">个人注册</li>
+          <%end%>
+          <%= link_to("/user/teachertable", :remote=>true) do %>
+            <li class="myli">学员注册</li>
+          <%end%>
+          <%= link_to("/user/orgnizationtable", :remote=>true) do %>
+            <li class="myli">单位注册</li>
+          <%end%>
+        </ul>
+      </ul>
+      <ul>
+        <li class="myli" style="opacity: 0.5;">会费缴纳</li>
+      </ul>
+      <ul>
+        <li class="myli" style="opacity: 0.5;">我的订单</li>
+      </ul>
+      <ul>
+        <li class="myli" style="opacity: 0.5;">查看会员证</li>
+      </ul>
+      <ul>
+        <%= link_to("/users/edit") do %>
+        <li class="myli">个人设置</li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+  <div class="personalform grtab">
+    <div class="register">
+      <div class="w">
+        <div class="sqzc">
+          <div class="sqzc-title">
+            <span>申请注册</span>
+          </div>
+          <div class="tongdao">
+            <div class="tongdao">
+              <div class="geren">
+                <a href="/personalmodel/userpage?a_id=lgezc">个人注册通道</a>
+                <span>*注：教师、制作师从此通道注册</span>
+              </div>
+              <div class="xueyuan">
+                <a href="/personalmodel/userpage?a_id=lxyzc">学员注册通道</a>
+                <span>*注：学生、家长、爱好者从此通道注册</span>
+              </div>
+              <div class="danwei">
+                <a href="/personalmodel/userpage?a_id=ldwzc">单位注册通道</a>
+                <span> *注：企业、教学机构、学校从此通道注册</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+      $('#gr').click(function () {
+          $('#gr-s').toggle();
+      })
+      $('#sq').click(function(){
+          $('#sq-s').toggle();
+      })
+  </script>
+
+</div>

@@ -1,0 +1,16 @@
+<div class="search">
+  <div class="w">
+    <label for="" style="line-height: 35px;">站内搜索：</label>
+    <input id="keyword1" type="text" value="请输入搜索内容" onclick="this.value='';focus()" style="color:#000;">
+    <a href="#" onclick="getSearch()">|搜索</a>
+    <span class="glyphicon glyphicon-search" style="line-height:30px;" aria-hidden="true"></span>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function getSearch()
+  {
+    var keyword=document.getElementById("keyword1")
+    window.location.href="/search/quanzhan?keyword="+keyword.value;
+  }
+</script>

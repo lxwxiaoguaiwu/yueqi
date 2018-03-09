@@ -1,0 +1,76 @@
+script[type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Z0rM85ZvpYYqqLN2KrF3uKlzCSwXRSse"]
+.newslist-right
+  ul.right-title
+    li.ynjd
+      | 培训公告
+  article
+    .newsdetails-title
+      span
+        = @news.title
+      .fb
+        = @news.written_by
+      .share
+        .box
+          - if @action
+            a
+              | 已收藏
+          - else
+            = link_to "收藏","/post/stara/#{@news.id}", :id => "asd",remote:true
+          div[style="line-height:24px;margin-left:50px;"]
+            | 分享:
+          .bshare-custom
+            a.bshare-qzone[title="分享到QQ空间"]
+            a.bshare-sinaminiblog[title="分享到新浪微博"]
+            a.bshare-weixin[title="分享到人人网"]
+            a.bshare-qqmb[title="分享到腾讯微博"]
+            a.bshare-neteasemb[title="分享到网易微博"]
+    .announcedetails-content
+      p.zy
+        = @news.content_sanitized
+        .yuedu[style="text-align: center;"]
+          | 阅读量:
+          = @count
+      .shuming
+        span
+          | 中国舞蹈家协会
+        span
+          | 中国文联舞蹈艺术中心
+      div[style="width: 345px;margin: 0 auto;margin-top: 10px;"]
+        span
+          | 培训地址:
+        #allmap[style="width:345px;height:240px;margin-top:10px;"]
+      .share[style="margin-top: 20px;margin-bottom:10px;"]
+        .box
+          button[type="button" name="button"]
+            | 已藏
+          div[style="line-height:24px;"]
+            | 分享:
+          .bshare-custom
+            a.bshare-qzone[title="分享到QQ空间"]
+            a.bshare-sinaminiblog[title="分享到新浪微博"]
+            a.bshare-weixin[title="分享到人人网"]
+            a.bshare-qqmb[title="分享到腾讯微博"]
+            a.bshare-neteasemb[title="分享到网易微博"]
+  .xgtz
+    span
+      | 相关通知：
+    ul
+      li.syp
+        a[href="#"]
+          | 上一篇：中国文化中心助阵贝宁国际乐器节
+      li.xyp
+        a[href="#"]
+          | 下一篇：海峡两岸 乐器教育交流
+
+
+javascript:
+  var map = new BMap.Map("allmap");
+  map.centerAndZoom(new BMap.Point(116.3917397, 40.00200402), 15);
+  map.addControl(new BMap.MapTypeControl());
+  map.setCurrentCity("北京");
+  map.enableScrollWheelZoom(true);
+  var point = new BMap.Point(116.3917497, 40.00200602);
+  map.centerAndZoom(point, 15);
+  var marker = new BMap.Marker(point);
+  map.addOverlay(marker);
+  marker.disableDragging();

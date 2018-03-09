@@ -1,0 +1,9 @@
+<% if @workexp.valid? %>
+
+  $("#workexp").prepend("<%=j render(:partial => "workexp"), :locals => { :workexp => @workexp })%>");
+
+<% else %>
+
+  alert("validation failed!");
+
+<% end %>

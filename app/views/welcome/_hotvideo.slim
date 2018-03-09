@@ -1,0 +1,29 @@
+.hotvideo
+  .w
+    .floor5-title
+      span.px
+        | 热门视频
+      .ckqb
+        span
+          a href="/newslist/videolist"
+            | 查看全部
+        = image_tag("video/jt.png")
+    ul
+      - @videos.each do |video|
+        li
+          .videoimg
+            a href="/videodetails/videodetails/#{video.id}"
+              = image_tag video.asset.url(:medium)
+          .bottom
+            span.sks
+              =video.title
+            a.star[href=""]
+              = image_tag("video/star.png")
+            a[href=""]
+              = image_tag("video/sc.png")
+            p
+              =video.written_by
+            a.bf[href=""]
+              = image_tag("video/bf.png")
+            span[style="font-size: 10px;color: #2763af;"]
+              | 112.3万

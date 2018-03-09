@@ -1,0 +1,110 @@
+.searchresult{
+  padding-bottom: 25px;
+}
+.searchresult .right-title span{
+  display: block;
+  background-color: #2763af;
+  padding: 0 10px 0 10px;
+  letter-spacing: 0.5px;
+}
+.searchresult .zhu{
+  text-align: center;
+  color: #484848;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+.searchresult .news{
+  width: 80%;
+  margin-left: 5%;
+}
+.searchresult .news .list ul{
+  width: 100%;
+  margin-left: 0;
+}
+.searchresult .news .news-title{
+  display: flex;
+  justify-content: space-between;
+  color: #397fb5;
+  font-weight: 700;
+  border-bottom: 1px solid #eaeaea;
+}
+.searchresult .news .news-title .t-left{
+  line-height: 34px;
+  font-size: 14px;
+}
+.searchresult .announ .list .tz li{
+  margin-bottom: 0;
+}
+.searchresult .announ .list li{
+  height: 30px;
+  line-height: 30px;
+}
+.searchresult .announ .list li a{
+  display: flex;
+  width: 100%;
+}
+.searchresult .announ .list li a .wdkj{
+  width: 75%;
+}
+.searchresult .announ .list li a .date{
+  width: 25%;
+  text-align: right;
+}
+.searchresult .mingjia .yzjsx{
+  margin-left: 0;
+  width: 100%;
+}
+.searchresult .mingjia .yzjsx .ylc ul{
+  display: flex;
+}
+.searchresult .video .hotvideo{
+  background-color: #fff;
+}
+.searchresult .video .hotvideo ul li{
+  margin-right: 0;
+}
+.searchresult .results{
+  width: 80%;
+  margin-left: 5%;
+}
+.searchresult .results table th{
+  text-align: center;
+}
+.searchresult .results table .ttitle{
+  height: 30px;
+  background-color: #f1ecec;
+  color: #004a9f;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.content .searchresult .screen ul .jb{
+  display: flex;
+}
+.searchresult .screen ul .jb .jiantou{
+  display: flex;
+  flex-direction: column;
+}
+.searchresult .screen ul .jb .jiantou .glyphicon.glyphicon-triangle-top{
+  line-height: 1px;
+  top: 5px;
+  margin-top: 5px;
+}
+.searchresult .results table th p{
+  display: block;
+  width: 246px;
+  height: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+  line-height: 30px;
+}
+@media ( orientation: portrait ){
+  .searchresult .news .news-title,
+  .searchresult .zhu{
+    margin-left: 0;
+    width: 100%;
+  }
+  .searchresult .announ .list li a .date{
+    overflow: hidden;
+  }
+}

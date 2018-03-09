@@ -1,0 +1,139 @@
+.ww
+  .qtsp
+    ul.bigshow-title
+      li.yzr
+        | 大型演出其他视频
+    .video.video-bj
+      .video-bj-title
+        ul
+          li.pl
+            | 排列 :
+          li.time
+            | 时间
+          li.sx
+            | 筛选 :
+            input[type="text"]
+            = image_tag("video/adsada_03.png")
+      .video-bj-content
+        div[style="display: flex;border-bottom: 1px solid #e1e1e1;height: 21px;"]
+          .hdsp
+            | 北京地区活动视频
+          ul[style="display: flex"]
+            li.li[style="color: #397fb5"]
+              | 视频15个
+            li.li[style="color: #0f4b9b"]
+              | 显示全部
+            li.li
+              = image_tag("video/adsada_05.png")
+        .video-list
+          .list
+            ul
+              - @videos.each do |video|
+                li
+                  .videoimg
+                    = image_tag video.asset.url(:medium)
+                  .bottom
+                    .vidbox
+                      span.sks
+                        =video.title
+                      .vibox
+                        a.star[href=""]
+                          = image_tag("video/star.png")
+                        a[href=""]
+                          = image_tag("video/sc.png")
+                    p
+                      =video.written_by
+                    a.bf[href=""]
+                      = image_tag("video/bf.png")
+                    span[style="font-size: 10px;color: #2763af;"]
+                      | 112.3万
+    .video.video-hb
+      .video-bj-title
+        ul
+          li.pl
+            | 排列 :
+          li.time
+            | 时间
+          li.sx
+            | 筛选 :
+            input[type="text"]
+            = image_tag("video/adsada_03.png")
+      .video-bj-content
+        div[style="display: flex;border-bottom: 1px solid #e1e1e1;height: 21px;"]
+          .hdsp
+            | 河北地区活动视频
+          ul[style="display: flex"]
+            li.li[style="color: #397fb5"]
+              | 视频15个
+            li.li[style="color: #0f4b9b"]
+              | 显示全部
+            li.li
+              = image_tag("video/adsada_05.png")
+        .video-list
+          .list
+            ul
+              - @videos.each do |video|
+                li
+                  .videoimg
+                    = image_tag video.asset.url(:medium)
+                  .bottom
+                    .vidbox
+                      span.sks
+                        =video.title
+                      .vibox
+                        a.star[href=""]
+                          = image_tag("video/star.png")
+                        a[href=""]
+                          = image_tag("video/sc.png")
+                    p
+                      =video.written_by
+                    a.bf[href=""]
+                      = image_tag("video/bf.png")
+                    span[style="font-size: 10px;color: #2763af;"]
+                      | 112.3万
+    .video.video-hb
+      .video-bj-title
+        ul
+          li.pl
+            | 排列 :
+          li.time
+            | 时间
+          li.sx
+            | 筛选 :
+            input[type="text"]
+            = image_tag("video/adsada_03.png")
+      .video-bj-content
+        div[style="display: flex;border-bottom: 1px solid #e1e1e1;height: 21px;"]
+          .hdsp
+            | 河北地区活动视频
+          ul[style="display: flex"]
+            li.li[style="color: #397fb5"]
+              | 视频15个
+            li.li[style="color: #0f4b9b"]
+              | 显示全部
+            li.li
+              = image_tag("video/adsada_05.png")
+        .video-list
+          .list
+            ul
+              - @videos.each do |video|
+                li
+                  .videoimg
+                    = image_tag video.asset.url(:medium)
+                  .bottom
+                    .vidbox
+                      span.sks
+                        =video.title
+                      .vibox
+                        a.star[href=""]
+                          = image_tag("video/star.png")
+                        a[href=""]
+                          = image_tag("video/sc.png")
+                    p
+                      =video.written_by
+                    a.bf[href=""]
+                      = image_tag("video/bf.png")
+                    span[style="font-size: 10px;color: #2763af;"]
+                      | 112.3万
+    div[value="1 0"]
+    #page.page_div

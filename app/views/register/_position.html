@@ -1,0 +1,23 @@
+<div class="position">
+  <div class="w">
+    <ol class="breadcrumb">
+      <li><a href="#">位置:</a></li>
+      <li><a href="/welcome/index">首页</a></li>
+      <li><a href="/register/register">申请注册</a></li>
+      <li class="active">申请注册办法</li>
+    </ol>
+    <div class="search">
+      <span class="znss">站内搜索：</span>
+      <input id="keyword1" type="text" value="请输入搜索内容" onclick="this.value='';focus()" style="color:#000;">
+      <a href="#" onclick="getSearch()">|搜索</a>
+      <span aria-hidden="true" class="glyphicon glyphicon-search" style="line-height:30px;"></span>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  function getSearch()
+  {
+    var keyword=document.getElementById("keyword1")
+    window.location.href="/search/quanzhan?keyword="+keyword.value;
+  }
+</script>

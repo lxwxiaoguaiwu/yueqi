@@ -1,0 +1,64 @@
+.content
+  .newslist-right#wenzhanglist
+    .tab-pane.fade.in.active#home
+      .wenzhang-title
+        span
+          | 热门视频
+      .screen
+        ul
+          li.pl
+            | 排列 :
+          li.time
+            | 时间
+          li.xs
+            | 显示 :
+            input[type="text"]
+            img[src="/assets/newslist/adsada_03.png" alt=""]
+          li.sx
+            | 筛选 :
+            input[type="text"]
+            = image_tag("video/adsada_03.png")
+            input[type="text"]
+            = image_tag("video/adsada_05.png")
+      .hotvideo
+        ul
+          - @videos.each do |video|
+            li
+              .videoimg
+                a href="/videodetails/videodetails/#{video.id}"
+                  = image_tag video.asset.url(:medium)
+              .bottom
+                span.sks
+                  | 萨克斯教学
+                a.star[href=""]
+                  = image_tag("video/star.png")
+                a[href=""]
+                  = image_tag("video/sc.png")
+                p
+                  | 左边的老师正在非常认真的
+                a.bf[href=""]
+                  = image_tag("video/bf.png")
+                span[style="font-size: 10px;color: #2763af;"]
+                  | 112.3万
+      nav[aria-label="Page navigation"]
+        ul.pagination
+          li
+            a[href="#" aria-label="Previous"]
+              span[aria-hidden="true"]
+                | 上一页
+          li
+            a[href="#"]
+              | 1
+          li
+            a[href="#"]
+              | 2
+          li
+            a[href="#"]
+              | 3
+          li
+            a[href="#"]
+              | 4
+          li
+            a[href="#" aria-label="Next"]
+              span[aria-hidden="true"]
+                | 下一页

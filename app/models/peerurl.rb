@@ -1,0 +1,2 @@
+class Peerurl < ApplicationRecord
+end

@@ -1,0 +1,9 @@
+<% if @eduexp.valid? %>
+
+  $("#eduexp").prepend("<%=j render(:partial => "eduexp"), :locals => { :eduexp => @eduexp })%>");
+
+<% else %>
+
+  alert("validation failed!");
+
+<% end %>

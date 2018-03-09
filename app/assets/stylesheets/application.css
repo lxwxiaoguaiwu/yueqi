@@ -1,0 +1,182 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require rails_admin_content_builder
+ */
+abbr{
+  display: none;
+}
+.sgin{
+  margin: 50px auto;
+  width: 705px;
+  border: 1px solid #808080;
+  padding-bottom: 20px;
+}
+.sgin .title{
+  height: 45px;
+  line-height: 45px;
+  background-color: #2763af;
+  font-size: 14px;
+  color: #fff;
+}
+.sgin .content{
+  display: block;
+  margin: 0 auto;
+  width: 622px;
+  position: relative;
+}
+.sgin .form-actions input{
+  font-size: 24px;
+  border-radius: 40px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 10px;
+  background-color: #fc6d00;
+  text-align: center;
+}
+.sgin form{
+  border: 1px solid #c0c0c0;
+  width: 100%;
+}
+.sgin .title1{
+  margin-top: 20px;
+  font-size: 24px;
+  background-color: #7eadd5;
+  display: flex;
+  width: 100%;
+  height: 45px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 45px;
+}
+.sgin .title1 span{
+  display: block;
+  width: 50%;
+  text-align: center;
+}
+/*.sgin label{
+  display: none;
+}*/
+.wjmm{
+  margin: 10px 0;
+  position: absolute;
+  top: 180px;
+  right: 40px;
+}
+.sgin .form-inputs .user_email label,
+.sgin .form-inputs .user_password label,
+.sgin .form-inputs .user_password_confirmation label{
+  display: none;
+}
+.sgin .checkbox{
+  margin-left: 60px;
+  margin-top: 50px;
+}
+.sgin .email,
+.sgin .password{
+  height: 40px;
+  margin-top: 10px;
+  margin: 10px auto 0 auto;
+  display: flex;
+}
+#admin_email,#admin_password,#user_email,#user_password,#user_password_confirmation{
+  width: 540px;
+  margin: 0 auto;
+  display: block;
+}
+#new_admin{
+  border: 0;
+}
+.form-actions{
+  text-align: center;
+  margin-top: 70px;
+  padding-bottom: 30px;
+}
+.user_password_confirmation label,.hint{
+  display: none;
+}
+.sign-up a{
+  display: none;
+}
+.wjpassword{
+  position: absolute;
+  top: 195px;
+  right: 40px;
+}
+form a{
+  position: absolute;
+  top: 195px;
+  right: 50px;
+}
+.error,.error_notification{
+  display: block;
+  margin-left: 40px;
+  color: red;
+  font-weight: bold;
+}
+.sgin #edit_user .required,
+.sgin #edit_user .password{
+  display: block;
+  line-height: 40px;
+}
+.sgin #edit_user .input{
+  display: flex;
+}
+#user_current_password{
+  width: 540px;
+}
+.bdshare_dialog_box{
+  width: 150px;
+}
+.bdshare_dialog_bg{
+  width: 150px;
+}
+.bshare-custom {
+  font-size: 13px;
+  line-height: 34px !important;
+}
+.fanhui{
+  position: absolute;
+  bottom: 30px;
+  left: 150px;
+  display: block;
+  width: 94px;
+  height: 47px;
+  line-height: 45px;
+  background-color: #fc6d00;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 10px;
+}
+@media ( orientation: portrait ){
+  .sgin,
+  .sgin .content,
+  #user_email,
+  #user_password{
+    width: 100%;
+  }
+  .form-inputs .input.email.required.user_email #user_email,
+  .form-inputs .input.password.optional.user_password.field_with_hint #user_password,
+  .form-inputs .input.password.optional.user_password_confirmation #user_password_confirmation,
+  .form-inputs .input.password.required.user_current_password.field_with_hint #user_current_password{
+    width: 80%;
+  }
+  .fanhui{
+    left: 270px;
+  }
+}

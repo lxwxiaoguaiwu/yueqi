@@ -1,0 +1,87 @@
+.ann-substance
+  .left
+    .article
+      .article-title
+        span.rmwz
+          | 热门文章
+        a.ckqb[href="/newslist/wenzhanglist"]
+          | 查看全部
+        a[href=""]
+          = image_tag("video/jt.png")
+      .title1
+        = image_tag("video/picture1.png")
+        span
+          | 关于表彰兵团妇女岗位建功先
+          br
+          | 进集体（个人）的决定
+      ul.article-list
+        - @articles.each do |article|
+          li
+            a[href="/newsdetails/newsdetails/#{article.id}"]
+              = article.title
+            span
+              = article.updated_at.strftime("%m-%d")
+    .video
+      .video-title
+        span.rmwz
+          | 热门视频
+        a.ckqb[href="/newslist/videolist"]
+          | 查看全部
+        a[href=""]
+          = image_tag("video/jt.png")
+      ul
+        - @videos.each do |video|
+          li
+            .videoimg
+              = image_tag video.asset.url(:medium)
+            .bottom[style="padding-top: 10px;padding-bottom: 10px;"]
+              span.sks[style="padding-left: 4%;"]
+                =video.title
+              a.star[href=""]
+                = image_tag("video/star.png")
+              a[href=""]
+                = image_tag("video/sc.png")
+              p[style="padding-left: 4%;"]
+                =video.written_by
+              a.bf[href=""]
+                = image_tag("video/bf.png")
+              span[style="font-size: 10px;color: #2763af;"]
+                | 112.3万
+  .right
+    ul.right-title.nav.nav-tabs
+      li.ynjd.active
+        a href="#home" data-toggle="tab"
+          | 展演通知
+      li.zwjl
+        a href="#huodong" data-toggle="tab"
+          | 活动通知
+    .tab-content
+      .tab-pane.fade.in.active#home
+        .screen
+          ul
+            li.pl
+              | 排列 :
+            li.time
+              | 时间
+            li.xs
+              | 显示 :
+              input[type="text"]
+              = image_tag("video/adsada_03.png")
+            li.sx
+              | 筛选 :
+              input[type="text"]
+              = image_tag("video/adsada_03.png")
+              input[type="text"]
+              = image_tag("video/adsada_05.png")
+        .list
+          ul
+            - @proclaims.each do |proclaim|
+              li
+                a[href="/announcedetails/announcedetails/#{proclaim.id}"]
+                  span.wdkj
+                    =proclaim.title
+                  span.date
+                    = proclaim.updated_at.strftime("%m-%d")
+        div[value="1 0"]
+        #page.page_div
+      .tab-pane.fade.in.active#huodong

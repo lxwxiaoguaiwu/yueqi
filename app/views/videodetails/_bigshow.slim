@@ -1,0 +1,176 @@
+.ww
+  .bigshow
+    .w
+      ul.bigshow-title.nav.nav-tabs
+        li.yzr
+          a href="#gjyzr" data-toggle="tab"
+            | 国际乐器演奏日
+        li.dxyc.active
+          a href="#home" data-toggle="tab"
+            | 大型演出
+        li.shhd
+          a href="#shhdzy" data-toggle="tab"
+            | 社会活动与展演
+      .tab-content
+        .tab-pane.fade.in.active#home
+          span.title
+            | 2017年国际乐器演奏日
+          .bigshow-content[style="display: flex;margin-top: 20px"]
+            .dpm
+              - @videos.each do |video|
+                div[style="width: 96%"]
+                  a[href="/videodetails/videodetails/#{video.id}"]
+                    = image_tag video.asset.url(:medium)
+                .wz[style="display: flex"]
+                  .title1
+                    = video.title
+                  div
+                    = image_tag("video/video_13.png")
+                    span
+                      | 345人
+                    button[style="border-radius: 10px"]
+                      | 已收藏
+                    = image_tag("video/video_11.png")
+                p
+                  = video.written_by
+            .zxsp
+              ul.zxsp-title.nav.nav-tabs
+                li.zx.active
+                  a href="#zuixin" data-toggle="tab"
+                    | 最新视频
+                li.rb
+                  a href="#rebo" data-toggle="tab"
+                    | 热播视频
+              .tab-content
+                .tab-pane.fade.in.active#zuixin
+                  ul.video-list
+                    - @videos.each do |video|
+                      li
+                        .zxtu
+                          = image_tag video.asset.url(:medium)
+                        div
+                          span.lsdb
+                            = video.title
+                          = image_tag("video/video_16.png")
+                          span.djl
+                            | 112.3万
+                .tab-pane.fade.in#rebo
+                  ul.video-list
+                    - @videos.each do |video|
+                      li
+                        .zxtu
+                          = image_tag video.asset.url(:medium)
+                        div
+                          span.lsdb
+                            | 北京乐器学会的理事代表
+                          img[src="/assets/video/video_16.png" alt="" style="margin-left: 8px"]
+                          span.djl
+                            | 112.3万
+        .tab-pane.fade.in#gjyzr
+          span.title
+            | 2017年国际乐器演奏日
+          .bigshow-content[style="display: flex;margin-top: 20px"]
+            .dpm
+              - @videos.each do |video|
+                div[style="width: 96%"]
+                  a[href="/videodetails/videodetails/#{video.id}"]
+                    = image_tag video.asset.url(:medium)
+                .wz[style="display: flex"]
+                  .title1
+                    = video.title
+                  div
+                    = image_tag("video/video_13.png")
+                    span
+                      | 345人
+                    button[style="border-radius: 10px"]
+                      | 已收藏
+                    = image_tag("video/video_11.png")
+                p
+                  = video.written_by
+            .zxsp
+              ul.zxsp-title.nav.nav-tabs
+                li.zx.active
+                  a href="#zuixin" data-toggle="tab"
+                    | 最新视频
+                li.rb
+                  a href="#rebo" data-toggle="tab"
+                    | 热播视频
+              .tab-content
+                .tab-pane.fade.in.active#zuixin
+                  ul.video-list
+                    - @videos.each do |video|
+                      li
+                        .zxtu
+                          = image_tag video.asset.url(:medium)
+                        div
+                          span.lsdb
+                            = video.title
+                          = image_tag("video/video_16.png")
+                          span.djl
+                            | 112.3万
+                .tab-pane.fade.in#rebo
+                  ul.video-list
+                    - @videos.each do |video|
+                      li
+                        .zxtu
+                          = image_tag video.asset.url(:medium)
+                        div
+                          span.lsdb
+                            | 北京乐器学会的理事代表
+                          img[src="/assets/video/video_16.png" alt="" style="margin-left: 8px"]
+                          span.djl
+                            | 112.3万
+        .tab-pane.fade.in#shhdzy
+          span.title
+            | 2017年国际乐器演奏日
+          .bigshow-content[style="display: flex;margin-top: 20px"]
+            .dpm
+              - @videos.each do |video|
+                div[style="width: 96%"]
+                  a[href="/videodetails/videodetails/#{video.id}"]
+                    = image_tag video.asset.url(:medium)
+                .wz[style="display: flex"]
+                  .title1
+                    = video.title
+                  div
+                    = image_tag("video/video_13.png")
+                    span
+                      | 345人
+                    button[style="border-radius: 10px"]
+                      | 已收藏
+                    = image_tag("video/video_11.png")
+                p
+                  = video.written_by
+            .zxsp
+              ul.zxsp-title.nav.nav-tabs
+                li.zx.active
+                  a href="#zuixin" data-toggle="tab"
+                    | 最新视频
+                li.rb
+                  a href="#rebo" data-toggle="tab"
+                    | 热播视频
+              .tab-content
+                .tab-pane.fade.in.active#zuixin
+                  ul.video-list
+                    - @videos.each do |video|
+                      li
+                        .zxtu
+                          = image_tag video.asset.url(:medium)
+                        div
+                          span.lsdb
+                            = video.title
+                          = image_tag("video/video_16.png")
+                          span.djl
+                            | 112.3万
+                .tab-pane.fade.in#rebo
+                  ul.video-list
+                    - @videos.each do |video|
+                      li
+                        .zxtu
+                          = image_tag video.asset.url(:medium)
+                        div
+                          span.lsdb
+                            | 北京乐器学会的理事代表
+                          img[src="/assets/video/video_16.png" alt="" style="margin-left: 8px"]
+                          span.djl
+                            | 112.3万

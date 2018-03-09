@@ -1,0 +1,17 @@
+<div class="title">单位注册申请表</div>
+<div class="beizhu">
+  <span>备注：</span>
+  <p>请如实、完善的填写个人信息后，才能进入入会申请流程<br>在查询页面智慧展示您的姓名、证书、简介等基础信息，其他个人信息将为您保密</p>
+</div>
+<div class="personal-information">
+  <div class="grxx">个人信息</div>
+  <%= simple_form_for @orgnization do |f| %>
+    <%= f.input :name, label: '单位名称：', placeholder: '安菁华' %>
+    <%= f.button:submit, value: '保存', :id => "btn"%>
+  <div class="grxx lxfs">联系方式</div>
+  <div class="grxx dwgk">工作及教育经历</div>
+  <% end %>
+  <div class="grxx jyjl">主要教育（培训）经历：</div>
+
+  <div class="grxx gzjl">主要工作经历：</div>
+</div>

@@ -1,0 +1,62 @@
+<div class="right">
+  <div class="conse">
+    <div class="">
+      <div class="" id="home">
+        <div class="mypagecontent" id="mypage">
+          <div class="mypagecontent-title">
+            <span>个人展示</span>
+          </div>
+          <div class="wodexiaoxi">
+            <div class="xiaoxi-title">
+              <div class="xx">音频视频</div>
+            </div>
+          </div>
+          <div class="tishi">
+            <p>提示：音频上传暂缓开通，上传视频可将链接贴入框内</p>
+          </div>
+          <div class="yxxy">
+            <div class="xy-title">
+              <div class="tit">视频：</div>
+              <div class="">
+                <a data-toggle="modal" data-backdrop="false" data-target="#myModal3" href="#">我要上传</a>
+                <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">上传视频</h4>
+                      </div>
+                      <%= simple_form_for @pvideo, remote: true do |form| %>
+                        <div class="modal-body">
+                          <div class="row">
+                            <div class="col-md-12" style="margin-bottom: 20px;"><%= form.input :source, label: '视频地址' %></div>
+                            <div class="col-md-12" style="margin-bottom: 20px;">
+                              <%= form.input :title, label: '视频标题'%>
+                            </div>
+                            <div class="col-md-12">
+                              <%= form.input :desc, label: '视频简介'%>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                          <%= form.button :submit, "上传", class: "btn btn-primary" %>
+                        </div>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </div>
+            </div>
+            <div id="pvideo" class="pvideo">
+              <% @pvideos.each do |c|%>
+                <%= render :partial => "pvideo/pvideo", :locals => { :pvideo => c } %>
+              <%end%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

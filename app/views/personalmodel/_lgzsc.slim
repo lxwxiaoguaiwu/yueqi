@@ -1,0 +1,203 @@
+.content
+  .newslist-right.searchresult[style="width:100%;margin-left:0"]
+    .right-title[style="width:100%;margin-left:0"]
+      span
+        | 关注收藏
+    .news[style="width:100%;margin-left:0"]
+      .news-title
+        .t-left
+          span
+            | 新闻
+        .t-right
+          span
+            | 新闻5条
+          span
+            | 显示全部
+          span.glyphicon.glyphicon-chevron-up
+      .list
+        ul
+          - @postas.each do |post|
+            li
+              .picture
+                = image_tag post.asset.url(:medium)
+              .new-content
+                .titltbox
+                  a.zuo[href="/newsdetails/newsdetails/#{post.id}"]
+                    =post.title
+                  span.you
+                    | 50分钟前 | 评论 1009
+                p
+                  =post.written_by
+                .box
+                  a[href="#"]
+                    | 收藏
+                  .bshare-custom
+                    a.bshare-more.bshare-more-icon.more-style-sharethis[href="#" title="更多平台"]
+    .announ.news[style="width:100%;margin-left:0"]
+      .news-title
+        .t-left
+          span
+            | 重要通知
+        .t-right
+          span
+            | 通知7条
+          span
+            | 收起
+          span.glyphicon.glyphicon-chevron-down
+      .list
+        ul.tz
+          - @postbs.each do |post|
+            li
+              a[href="/announcedetails/announcedetails/#{post.id}"]
+                span.wdkj
+                  =post.title
+                span.date
+                  = post.updated_at.strftime("%m-%d")
+    .mingjia.news[style="width:100%;margin-left:0"]
+      .news-title
+        .t-left
+          span
+            | 名家推荐
+        .t-right
+          span
+            | 名家7条
+          span
+            | 显示全部
+          span.glyphicon.glyphicon-chevron-up
+      .yzjsx
+        ul.yzj-list
+          - @mingjias.each do |mingjia|
+            li.list1
+              .mjtp
+                = image_tag mingjia.asset.url(:medium)
+              .people
+                a[href="#"]
+                  = mingjia.title
+                span
+                  | 所在地区：
+                  = mingjia.suozaidi
+                span
+                  | 所属类别：
+                  = mingjia.yuezhong
+                span
+                  | 毕业院校:
+                  = mingjia.zhuceyuanxiao
+              .ylc[style="margin-left: 30%;"]
+                button[type="button" name="button"]
+                  | 收藏
+                .bshare-custom
+                  a.bshare-more.bshare-more-icon.more-style-sharethis[href="#" title="更多平台"]
+                ul
+                  li
+                    = image_tag("video/ylc_03.png")
+                    span
+                      | 音频:幽兰操
+                  li
+                    = image_tag("video/ylc_03.png")
+                    span
+                      | 音频:幽兰操
+                  li
+                    = image_tag("video/ylc_03.png")
+                    span
+                      | 音频:幽兰操
+    .video.news[style="width:100%;margin-left:0"]
+      .news-title
+        .t-left
+          span
+            | 活动视频
+        .t-right
+          span
+            | 视频5条
+          span
+            | 显示全部
+          span.glyphicon.glyphicon-chevron-up
+      .hotvideo
+        ul
+          li
+            .videoimg
+              a[href="#"]
+                = image_tag("video/video.png")
+            .bottom
+              span.sks
+                | 萨克斯教学
+              a.star[href="#"]
+                span.glyphicon.glyphicon-star
+              a[href="#"]
+                = image_tag("video/sc.png")
+              p
+                | 左边的老师正在非常认真的
+              a.bf[href="#"]
+                = image_tag("video/bf.png")
+              span
+                | 112.3万
+          li
+            .videoimg
+              a[href="#"]
+                = image_tag("video/video.png")
+            .bottom
+              span.sks
+                | 萨克斯教学
+              a.star[href="#"]
+                span.glyphicon.glyphicon-star
+              a[href="#"]
+                = image_tag("video/sc.png")
+              p
+                | 左边的老师正在非常认真的
+              a.bf[href="#"]
+                = image_tag("video/bf.png")
+              span
+                | 112.3万
+          li
+            .videoimg
+              a[href="#"]
+                = image_tag("video/video.png")
+            .bottom
+              span.sks
+                | 萨克斯教学
+              a.star[href="#"]
+                span.glyphicon.glyphicon-star
+              a[href="#"]
+                = image_tag("video/sc.png")
+              p
+                | 左边的老师正在非常认真的
+              a.bf[href="#"]
+                = image_tag("video/bf.png")
+              span
+                | 112.3万
+          li
+            .videoimg
+              a[href="#"]
+                = image_tag("video/video.png")
+            .bottom
+              span.sks
+                | 萨克斯教学
+              a.star[href="#"]
+                span.glyphicon.glyphicon-star
+              a[href="#"]
+                = image_tag("video/sc.png")
+              p
+                | 左边的老师正在非常认真的
+              a.bf[href="#"]
+                = image_tag("video/bf.png")
+              span
+                | 112.3万
+    .announ.news[style="width:100%;margin-left:0"]
+      .news-title
+        .t-left
+          span
+            | 教师培训
+        .t-right
+          span
+            | 培训5条
+          span
+            | 显示全部
+          span.glyphicon.glyphicon-chevron-up
+      .list
+        ul.tz
+          - @postds.each do |post|
+            li
+              a[href="/trainningdetails/trainningdetails/#{post.id}"]
+                span.wdkj
+                  =post.title
+                span.date
+                  = post.updated_at.strftime("%m-%d")

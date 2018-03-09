@@ -1,0 +1,24 @@
+.yzjtj
+  .yzjtj-title
+    span
+      | 演奏家推荐
+  ul
+    - @mingjiums.each do |mingjia|
+      li
+        .mjtp
+          = image_tag mingjia.asset.url(:medium)
+        .people
+          a.zqs[href="/notabledetails/notabledetails/#{mingjia.id}"]
+            span[style="font-size: 14px;font-weight: bold;"]
+              = mingjia.title
+          span
+            | 所在地区:
+            = mingjia.suozaidi
+          span
+            | 所属类别:
+            = mingjia.yuezhong
+        .ylc
+          button
+            | 收藏
+          .bshare-custom
+            a.bshare-more.bshare-more-icon.more-style-sharethis[title="更多平台"]

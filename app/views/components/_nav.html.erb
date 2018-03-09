@@ -1,0 +1,137 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <ul class="menu" id="menu">
+        <li class="li"><a href="/welcome/index">首页</a></li>
+        <li class="li xinwen">
+          <a href="/newslist/newslist#home?keyword=home">新闻</a>
+          <ul class="erji">
+            <li class="newli"><a href="/newslist/newslist#home?keyword=home">业内焦点</a></li>
+            <li class="newli"><a href="/newslist/newslist#exchange?keyword=exchange">中外交流</a></li>
+            <li class="newli"><a href="/newslist/newslist#association?keyword=association">协会新闻</a></li>
+          </ul>
+        </li>
+        <li class="li tongzhi">
+          <a href="/announce/announce">重要通知</a>
+          <ul class="erji">
+            <li class="newli"><a href="/announce/announce">展演通知</a></li>
+            <li class="newli"><a href="/announce/announce">活动通知</a></li>
+          </ul>
+        </li>
+        <li class="li mingjiatuijian">
+          <a href="/notable/notable">名家推荐</a>
+          <ul class="erji">
+            <li class="newli"><a href="/notable/notable">演奏家</a></li>
+            <li class="newli"><a href="/notable/notable">优秀教师</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="menu" id="menu">
+        <li class="li shiping">
+          <a href="/video/video">活动视频</a>
+          <ul class="erji">
+            <li class="newli"><a href="/video/video">国际乐器演奏日</a></li>
+            <li class="newli"><a href="/video/video">大型演出</a></li>
+            <li class="newli"><a href="/video/video">社会活动与展演</a></li>
+          </ul>
+        </li>
+        <li class="li peixun">
+          <a href="/trainning/trainning">教师培训</a>
+          <ul class="erji">
+            <li class="newli"><a href="/trainning/trainning">培训公告</a></li>
+            <li class="newli"><a href="/trainning/trainning">资料下载</a></li>
+          </ul>
+        </li>
+        <li class="li shenqingzhuce">
+          <a href="/register/register">申请注册</a>
+          <ul class="erji">
+            <li class="newli"><a href="/register/register">申请注册办法</a></li>
+          </ul>
+        </li>
+        <li class="li ptjianjie">
+          <a href="/introduce/introduce">平台简介</a>
+          <ul class="erji">
+            <li class="newli"><a href="/introduce/introduce">平台简介</a></li>
+            <li class="newli"><a href="/introduce/introduce">组织机构</a></li>
+            <li class="newli"><a href="/introduce/introduce">联系我们</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .erji{
+    display: none;
+  }
+  .xinwen:hover .erji,
+  .tongzhi:hover .erji,
+  .mingjiatuijian:hover .erji,
+  .shiping:hover .erji,
+  .peixun:hover .erji,
+  .shenqingzhuce:hover .erji,
+  .ptjianjie:hover .erji{
+    display: block;
+  }
+  .menu .li:hover a{
+    background: #fff;
+    color: #2763af;
+  }
+  .menu .li .erji .newli a:hover{
+    background-color: #2763af;
+    color: #fff;
+  }
+  .menu { padding:0; margin:0; list-style-type:none;}
+
+  .menu .li { background:#fff; margin-right:1px; float:left; color:#fff;position: relative;}
+  .menu .li .erji{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2763af;
+    z-index: 99;
+  }
+  .menu .li .erji a{
+    color: #2763af;
+  }
+  .menu .li a { display:block; width:80px; text-align:center; height:32px; line-height:32px;  font-size:13px; text-decoration:none;overflow: hidden;}
+
+
+
+  .cur{ background:#2763af; color: #fff;font-weight:bold;}
+
+</style>
+<script type="text/javascript">
+
+  var urlstr = location.href;
+
+  //alert((urlstr + '/').indexOf($(this).attr('href')));
+
+  var urlstatus=false;
+
+  $("#menu a").each(function () {
+
+    if ((urlstr + '/').indexOf($(this).attr('href')) > -1&&$(this).attr('href')!='') {
+
+      $(this).addClass('cur'); urlstatus = true;
+
+    } else {
+
+      $(this).removeClass('cur');
+
+    }
+
+  });
+
+  if (!urlstatus) {$("#menu a").eq(0).addClass('cur'); }
+
+</script>

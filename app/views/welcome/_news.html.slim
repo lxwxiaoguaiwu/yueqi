@@ -1,0 +1,55 @@
+.news
+  .w
+    .pxgg
+      .pxgg-title
+        span.px
+          | 培训公告
+        .ckqb
+          span
+            a href="/trainning/trainning"
+              | 查看全部
+          = image_tag("video/jt.png")
+      ul
+        - @trainnings.each do |trainning|
+          li
+            a[href="/trainningdetails/trainningdetails/#{trainning.id}"]
+              span.wdkj
+                =trainning.title
+              span.date
+                = trainning.updated_at.strftime("%m-%d")
+    .mjtj
+      .pxgg-title.mjtj-title
+        span.px.mjtj-mj
+          | 名家推荐
+        .ckqb
+          span
+            a href="/notable/notable"
+              | 查看全部
+          = image_tag("video/jt.png")
+      .mj
+        ul
+          - @mingjiums.each do |mingjium|
+            li
+              a[href="/notabledetails/notabledetails/#{mingjium.id}"]
+                = image_tag mingjium.asset.url(:medium)
+    .zxbb
+      .pxgg-title
+        span.px
+          | 最新播报
+        .ckqb
+          span
+            a href="/announce/announce"
+              | 查看全部
+          = image_tag("video/jt.png")
+      .title1
+        = image_tag("video/picture1.png")
+        span
+          | 关于表彰兵团妇女岗位建功先进集体（个人）的决定
+      ul
+        - @articles.each do |article|
+          li
+            a[href="/announcedetails/announcedetails/#{article.id}"]
+              span.zx
+                = article.title
+              span.date
+                = article.updated_at.strftime("%m-%d")

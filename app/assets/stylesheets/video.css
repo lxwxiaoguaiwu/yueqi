@@ -1,0 +1,322 @@
+.bigshow{
+    width: 100%;
+    background-color: #f5f5f5;
+    padding-top: 20px;
+}
+.bigshow .w{
+    padding-top: 25px;
+}
+.bigshow .bigshow-title,
+.qtsp .bigshow-title{
+    height: 30px;
+    display: flex;
+    font-size: 14px;
+    border-bottom: 2px solid;
+    color: #2763af;
+}
+.bigshow .bigshow-title .yzr,
+.bigshow .bigshow-title .dxyc,
+.bigshow .bigshow-title .shhd,
+.qtsp .bigshow-title .yzr{
+    width: 135px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.bigshow .bigshow-title .dxyc{
+    width: 90px;
+    color: #fff;
+    margin: 0 10px;
+}
+.qtsp .bigshow-title .yzr{
+    width: 120px;
+    background-color: #2763af;
+    color: #fff;
+}
+.bigshow .title{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    color: #848483;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.bigshow .dpm{
+    flex: 2;
+}
+.bigshow .dpm .dpmimg{
+  width: 96%;
+}
+.bigshow .dpm a{
+    width: 100%;
+    display: block;
+}
+.bigshow .dpm a img{
+  width: 100%;
+}
+.bigshow .dpm .video3{
+    width: 100%;
+    height: 367px;
+}
+.bigshow .dpm .wz{
+    height: 40px;
+    width: 96%;
+    line-height: 40px;
+    border-bottom: 1px solid #d9d9d9;
+}
+.bigshow .dpm .wz button{
+    border-radius: 10px;
+    height: 25px;
+    line-height: 9px;
+}
+.bigshow .dpm .title1{
+    flex: 1 1 50%;
+    color: #2763af;
+}
+.bigshow .dpm p{
+    width: 96%;
+    font-size: 12px;
+    color: #555555;
+    margin-top: 15px;
+    line-height: 20px;
+}
+.bigshow .zxsp .zxsp-title{
+    width: 235px;
+    height: 30px;
+    border-bottom: 1px solid #cecece;
+    margin: 0 auto;
+    display: flex;
+    line-height: 30px;
+    background-color: #ffffff;
+}
+.bigshow .zxsp .zxsp-title .zx{
+    width: 75px;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.bigshow .zxsp .zxsp-title .rb{
+    color: #2763af;
+    font-weight: bold;
+}
+.bigshow .zxsp .video-list{
+    width: 235px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    position: absolute;
+    overflow-y: auto;
+    height: 440px;
+}
+.bigshow .zxsp .video-list li{
+    display: flex;
+    height: 79px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-top: 10px;
+}
+.bigshow .zxsp .video-list li .zxtu img{
+    width: 107px;
+}
+.bigshow .zxsp .video-list li .lsdb{
+    display: block;
+    font-size: 12px;
+    color: #555555;
+    margin-left: 8px;
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+.qtsp .bigshow-title{
+    margin-top: 20px;
+}
+.qtsp .video-bj-title{
+    height: 30px;
+    background-color: #7eadd5;
+}
+.qtsp .video-bj-title ul{
+    display: flex;
+    justify-content: flex-end;
+    line-height: 30px;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+}
+.qtsp .video-bj-title ul .sx{
+    display: inline-table;
+}
+.qtsp .video-bj-title ul input{
+    width: 44px;
+    height: 18px;
+    border: 0;
+}
+.qtsp .video-bj-content{
+    background-color: #f5f5f5;
+    padding-top: 10px;
+}
+.qtsp .video-bj-content .hdsp,
+.qtsp .video-bj-content .li{
+    font-weight: bold;
+    font-size: 15px;
+}
+.qtsp .video-bj-content .li{
+    margin-left: 15px;
+}
+.qtsp .video-bj-content .hdsp{
+    flex: 1;
+    color: #5a5a5a;
+}
+.qtsp .video-bj-content .video-list .list{
+    width: 86%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.qtsp .video-bj-content .video-list ul{
+    width: 100%;
+    display: flex;
+    margin-top: 27px;
+    flex-wrap: wrap;
+}
+.qtsp .video-bj-content .video-list ul .vid{
+    width: 100%;
+}
+.qtsp .video-bj-content .video-list ul li{
+    margin-right: 6px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    width: 24%;
+}
+.qtsp .video-bj-content .video-list ul li .bottom{
+  width: 100%;
+}
+.qtsp .video-bj-content .video-list ul li .bottom .vidbox{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.qtsp .video-bj-content .video-list ul li .bottom .vidbox span{
+  overflow: hidden;
+  height: 15px;
+  line-height: 1.5;
+}
+.qtsp .video-bj-content .video-list ul li .bottom .vidbox .vibox{
+  display: flex;
+}
+.qtsp .video-bj-content .video-list ul li .bottom p{
+  margin-bottom: 5px;
+  overflow: hidden;
+  height: 15px;
+  line-height: 1.5;
+}
+.qtsp nav{
+    text-align: center;
+}
+.xgpl .xgpl-title{
+  display: flex;
+  border-bottom: 1px solid #6c6c6c;
+  margin-top: 30px;
+}
+.xgpl .xgpl-title li{
+  width: 75px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #2763af;
+}
+.xgpl .xgpl-title .tj{
+  color: #2763af;
+  background-color: #fff;
+}
+.xgpl .xgpl-content{
+  margin-top: 10px;
+  width: 557px;
+}
+.xgpl .xgpl-content .fbpl-title{
+  font-size: 12px;
+  font-weight: bold;
+  color: #0f4b9b;
+  display: block;
+}
+.xgpl .fbpl{
+  border-bottom:1px solid #e5e5e5;
+}
+.xgpl .xgpl-content textarea{
+  width: 557px;
+  height: 55px;
+  background-color: #f4f4f4;
+  border: none;
+  margin-top: 10px;
+}
+.xgpl .xgpl-content .btnbox{
+  text-align: right;
+  margin: 10px 0 15px 0;
+}
+.xgpl .xgpl-content .btnbox button{
+  width: 75px;
+  height: 27px;
+  background-color: #fc7200;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.xgpl .xgpl-content .zxpl .titlebox{
+  display: flex;
+  color: #3c6dae;
+  margin: 15px 0;
+}
+.xgpl .xgpl-content .zxpl .titlebox .zx{
+  flex: 1;
+  font-weight: bold;
+}
+.xgpl .xgpl-content .zxpl .pl-content{
+  padding-bottom: 130px;
+}
+.xgpl .xgpl-content .zxpl .pl-content li{
+  height: 65px;
+  line-height: 17px;
+  border-bottom: 1px solid #fafafa;
+  color: #858487;
+}
+.xgpl .xgpl-content .zxpl .pl-content .nicheng{
+  padding-top: 7px;
+  display: flex;
+  justify-content: space-between;
+}
+@media ( orientation: portrait ){
+  .bigshow .zxsp{
+    display: none;
+  }
+  .bigshow,
+  .qtsp{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .qtsp .video-bj-content .video-list .list{
+    width: 100%;
+  }
+  .qtsp .video-bj-content .video-list ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .qtsp .video-bj-content .video-list ul li{
+    width: 48%;
+  }
+  .qtsp .video-bj-content .video-list ul li .videoimg img{
+    width: 100%;
+  }
+  .xgpl .xgpl-content,
+  .xgpl .xgpl-content textarea{
+    width: 100%;
+  }
+  .bigshow .dpm .dpmimg{
+    width: 100%;
+  }
+  .bigshow .dpm .wz{
+    width: 100%;
+  }
+}

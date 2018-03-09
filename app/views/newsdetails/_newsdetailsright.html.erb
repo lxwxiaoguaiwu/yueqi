@@ -1,0 +1,55 @@
+<div class="newslist-right">
+  <ul class="right-title">
+    <li class="ynjd">业内焦点</li>
+  </ul>
+  <article>
+    <div class="newsdetails-title">
+        <span><%= @news.title %></span>
+        <div class="fb">
+          <%= @news.written_by %>
+        </div>
+        <div class="share">
+          <div class="box">
+            <% if @action %>
+              <a>已收藏</a>
+            <% else %>
+              <%= link_to "收藏","/post/stara/#{@news.id}", :id => "asd",remote:true%>
+            <% end %>
+            <div style="line-height:24px;margin-left:50px;">分享: </div>
+            <div class="bshare-custom">
+              <a title="分享到QQ空间" class="bshare-qzone"></a>
+              <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+              <a title="分享到人人网" class="bshare-weixin"></a>
+              <a title="分享到腾讯微博" class="bshare-qqmb"></a>
+              <a title="分享到网易微博" class="bshare-neteasemb"></a>
+            </div>
+          </div>
+        </div>
+        <%= @news.content_sanitized %>
+        <div class="yuedu" style="text-align: center;">阅读量:<%= @count%></div>
+    </div>
+  </article>
+  <div class="xgxw">
+    <span>相关新闻：</span>
+    <ul>
+      <li class="syp"><a href="#">上一篇：中国文化中心助阵贝宁国际乐器节</a></li>
+      <li class="xyp"><a href="#">下一篇：海峡两岸 乐器教育交流</a></li>
+    </ul>
+  </div>
+  <div class="xgxw fbpl">
+    <span>发表评论</span>
+    <%= simple_form_for(@comment, url: "/comments?cid=#{@news.id}",:remote=>true) do |f| %>
+      <%= f.text_area :body,:rows=>"8", :cols=>"80", required: false, autofocus: true, :placeholder => "发表评论" %>
+      <%= f.button :submit, "发表评论"%>
+    <% end %>
+  </div>
+  <div style="display:flex; width:560px; margin-left:5%;">
+    <span class="pl">最新评论</span>
+    <span class="num">全部评论</span>
+  </div>
+  <div id="comments" class="xgxw zxpl">
+    <% @comments.each do |c|%>
+      <%= render :partial => "comments/comment", :locals => { :comment => c } %>
+    <%end%>
+  </div>
+</div>

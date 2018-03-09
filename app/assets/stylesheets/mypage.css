@@ -1,0 +1,82 @@
+.mypagecontent .mypagecontent-title{
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.mypagecontent .mypagecontent-title span{
+  display: block;
+  width: 73px;
+  line-height: 30px;
+  background-color: #0f4b9b;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+}
+.mypagecontent .xiaoxi-title{
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #7eadd5;
+  color: #fff;
+}
+.mypagecontent .xiaoxi-title .xx{
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+.mypagecontent .wodexiaoxi li,
+.mypagecontent .guanzhushoucang li{
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid;
+}
+.mypagecontent .wodexiaoxi li a,
+.mypagecontent .guanzhushoucang li a{
+  display: flex;
+  justify-content: space-between;
+  color: #505050;
+  font-size: 12px;
+}
+.mypagecontent .wodetupian table .first,
+.mypagecontent .wodeshipin table .first,
+.mypagecontent .wodewenzhang table .first{
+  height: 25px;
+  background-color: #c8c8c8;
+}
+.mypagecontent .wodewenzhang table tr{
+  height: 30px;
+}
+table{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+/*#home{
+  padding-bottom: 100px;
+}*/
+.zhanshibeizhu{
+  display: flex;
+  margin: 0 auto;
+  width: 62%;
+  margin-bottom: 20px;
+}
+.grcontent{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.zhapian,.suozaidi{
+  width: 100%;
+}
+.grcontent .name,
+.grcontent .zhuanye,
+.grcontent .sex,
+.grcontent .birthday,
+.grcontent .mingzu,
+.grcontent .zhengshu{
+  width: 50%;
+  margin-bottom: 20px;
+}

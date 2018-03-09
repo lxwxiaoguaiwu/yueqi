@@ -1,0 +1,49 @@
+.register
+    .w
+      .slide.swiper-container
+        .swiper-wrapper
+          - @slides.each do |slide|
+            .swiper-slide
+              = image_tag slide.asset.url(:medium)
+        .swiper-pagination
+
+        .swiper-button-prev
+        .swiper-button-next
+
+      .sqzc
+        .sqzc-title
+          span
+            | 申请注册
+        .tongdao
+          input#state[type="txt" value="true" style="display:none"]
+          .geren#avalue
+            - if user_signed_in?
+              a value="0" href="/personalmodel/userpage?a_id=lgezc"
+                | 个人注册通道
+              span
+                | *注：教师、制作师从此通道注册
+            - else
+                = link_to("个人注册通道", new_user_session_path, :data_toggle => 'modal', :data_target => '#dengluzhuce' )
+                span
+                  | *注：教师、制作师从此通道注册
+          input[type="text" name="" value="true" style="display:none;"]
+          .xueyuan#avalue1
+            - if user_signed_in?
+              a value="1" href="/personalmodel/userpage?a_id=lxyzc"
+                | 学员注册通道
+              span
+                | *注：学生、家长、爱好者从此通道注册
+            - else
+                = link_to("学员注册通道", new_user_session_path, :data_toggle => 'modal', :data_target => '#dengluzhuce' )
+                span
+                  | *注：学生、家长、爱好者从此通道注册
+          .danwei#avalue2
+            - if user_signed_in?
+              a value="2" href="/personalmodel/userpage?a_id=ldwzc"
+                | 单位注册通道
+              span
+                | *注：企业、教学机构、学校从此通道注册
+            - else
+                = link_to("单位注册通道", new_user_session_path, :data_toggle => 'modal', :data_target => '#dengluzhuce' )
+                span
+                  | *注：企业、教学机构、学校从此通道注册

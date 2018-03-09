@@ -1,0 +1,104 @@
+<div class="title">学员注册申请表</div>
+<div class="beizhu">
+  <span>备注：</span>
+  <p>请如实、完善的填写个人信息后，才能进入入会申请流程<br>在查询页面智慧展示您的姓名、证书、简介等基础信息，其他个人信息将为您保密</p>
+</div>
+<div class="personal-information">
+  <%= simple_form_for @teacher do |f| %>
+    <% if @teacher.nil?%>
+      <div class="grxx">个人信息</div>
+        <%= f.input :name, label: '姓 名：', placeholder: '安菁华' %>
+        <%= f.label "性别："%>
+        <%= f.collection_radio_buttons :gender,[[true,'男'],[false,'女']],:first,:last%>
+        <%= f.input :minzu, label: '民族：',placeholder: '汉族' %>
+        <%= f.input :idcard, label: '身份证号：',placeholder: '请输入15或18位身份证号码' %>
+        <%= f.input :hometown, label: '籍贯：',placeholder: '河北省-石家庄市-长安区' %>
+        <%= f.input :stype, label: '注册类型：',placeholder: '教师' %>
+        <%= f.input :wenhua, label: '文化程度：',placeholder: '本科' %>
+        <%= f.input :zhuanye, label: '专业：',placeholder: '多乐种用逗号分隔‘扬琴,柳琴’' %>
+        <%= f.input :suozaidi, label: '所在地：',placeholder: '河北省-石家庄市-长安区' %>
+      <div class="grxx lxfs">联系方式</div>
+        <%= f.input :mobile, label: '移动电话：', placeholder: '188××××××××' %>
+        <%= f.input :address, label: '通讯地址：' %>
+        <%= f.input :worktel, label: '工作电话：' %>
+        <%= f.input :zipcode, label: '邮政编码：' %>
+        <%= f.input :wechat, label: '微信或QQ号：' %>
+        <%= f.input :email, label: 'E-Mail：' %>
+      <div class="grxx dwgk">工作及教育经历</div>
+        <%= f.input :company, label: '工作单位：', placeholder: '当前所在单位、企业等' %>
+        <%= f.input :duty, label: '职务：' %>
+        <%= f.input :wstatus, label: '工作现状：' %>
+        <%= f.input :colledge, label: '毕业院校：' %>
+    <%else %>
+      <div class="grxx">个人信息</div>
+        <%= f.input :name, label: '姓 名：', :class => "bjjbtn", placeholder: '安菁华', :disabled => true %>
+        <%= f.label "性别：", :class => "bjjbtn", :disabled => true%>
+        <%= f.collection_radio_buttons :gender,[[true,'男'],[false,'女']],:first,:last, :disabled => true%>
+        <%= f.input :minzu, label: '民族：', :class => "bjjbtn", placeholder: '汉族', :disabled => true %>
+        <%= f.input :idcard, label: '身份证号：', :class => "bjjbtn", placeholder: '请输入15或18位身份证号码',:disabled => true %>
+        <%= f.input :hometown, label: '籍贯：', :class => "bjjbtn", placeholder: '河北省-石家庄市-长安区',:disabled => true %>
+        <%= f.input :stype, label: '注册类型：', :class => "bjjbtn", placeholder: '教师',:disabled => true %>
+        <%= f.input :wenhua, label: '文化程度：', :class => "bjjbtn", placeholder: '本科',:disabled => true %>
+        <%= f.input :zhuanye, label: '专业：', :class => "bjjbtn", placeholder: '多乐种用逗号分隔‘扬琴,柳琴’',:disabled => true %>
+        <%= f.input :suozaidi, label: '所在地：', :class => "bjjbtn", placeholder: '河北省-石家庄市-长安区',:disabled => true %>
+      <div class="grxx lxfs">联系方式</div>
+        <%= f.input :mobile, label: '移动电话：', :class => "bjjbtn", placeholder: '188××××××××',:disabled => true %>
+        <%= f.input :address, label: '通讯地址：', :class => "bjjbtn", :disabled => true %>
+        <%= f.input :worktel, label: '工作电话：', :class => "bjjbtn", :disabled => true %>
+        <%= f.input :zipcode, label: '邮政编码：', :class => "bjjbtn",:disabled => true %>
+        <%= f.input :wechat, label: '微信或QQ号：', :class => "bjjbtn", :disabled => true %>
+        <%= f.input :email, label: 'E-Mail：', :class => "bjjbtn", :disabled => true %>
+      <div class="grxx dwgk">工作及教育经历</div>
+        <%= f.input :company, label: '工作单位：', :class => "bjjbtn", placeholder: '当前所在单位、企业等',:disabled => true %>
+        <%= f.input :duty, label: '职务：', :class => "bjjbtn", :disabled => true %>
+        <%= f.input :wstatus, label: '工作现状：', :class => "bjjbtn", :disabled => true %>
+        <%= f.input :colledge, label: '毕业院校：', :class => "bjjbtn", :disabled => true %>
+    <% end %>
+    <%= f.button:submit, value: '保存',:class => "bcbtn", :id => "btn" %>
+    <input type="button" name="button" class="bjbtn" id="btn" value="编辑">
+  <%end%>
+  <div class="grxx jyjl">主要教育（培训）经历：</div>
+    <%= simple_form_for @eduexp, remote: true do |f| %>
+      <%= f.input :name, label: '主要教育经历:' %>
+      <%= f.input :sedate, label: '起止年月:' %>
+      <%= f.input :content, label: '专业内容:' %>
+      <%= f.button :submit, :id => "btn", value:'添加' %>
+    <%end %>
+    <div id="eduexp" class="eduexp">
+      <% @eduexps.each do |c|%>
+        <%= render :partial => "eduexp/eduexp", :locals => { :eduexp => c } %>
+      <%end%>
+    </div>
+  <div class="grxx gzjl">主要工作经历：</div>
+    <%= simple_form_for @workexp, remote: true do |f| %>
+      <%= f.input :sedate, label: '起止年月:' %>
+      <%= f.input :name, label: '所在单位:' %>
+      <%= f.input :content, label: '所在地区:' %>
+      <%= f.input :distinct, label: '备注:' %>
+      <%= f.input :duty, label: '职务:' %>
+      <%= f.button :submit, :id => "btn", value:'添加' %>
+    <%end %>
+    <div id="workexp" class="workexp">
+      <% @workexps.each do |c|%>
+        <%= render :partial => "workexp/workexp", :locals => { :workexp => c } %>
+      <%end%>
+    </div>
+    <div class="" style="display:flex;justify-content:center;">
+      <input name="" type="checkbox" value="" / style="margin: 0 10px 0 0;"><a href="#">同意申请协议 </a>
+    </div>
+    <div class="button" style="margin:25px 0;">
+      <button type="button" name="button" style="margin-right:20px;">下载申请表格</button>
+      <button type="button" name="button" style="margin-left:20px;">提交注册表格</button>
+    </div>
+</div>
+<script type="text/javascript">
+  $(function () {
+    $(".bcbtn").hide();
+  })
+  $('.bjbtn').click(function (){
+    $('.disabled').attr("disabled", false);
+    $(".bcbtn").show();
+    $(".bjbtn").hide();
+  })
+
+</script>

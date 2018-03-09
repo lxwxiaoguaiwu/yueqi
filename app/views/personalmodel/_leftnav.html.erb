@@ -1,0 +1,113 @@
+<div class="leftnav">
+  <div class="sctx">
+    <a data-toggle="modal" data-backdrop="false" data-target="#myModal" href="#">
+      <%= image_tag @user.asset.url(:medium), :class => "img-circle"%>
+    </a>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">上传头像</h4>
+          </div>
+          <%= simple_form_for @user, url: "/users/#{current_user.id}" , remote: true do |form| %>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-4"><%= form.input :asset, label: '头像',as: :file %></div>
+                <div class="col-md-8"><img id="preview"  style="width:360px;height:240px;"></div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+              <%= form.button :submit, "保存头像", class: "btn btn-primary" %>
+            </div>
+          <% end %>
+          <script>
+          document.getElementById('user_asset').onchange = function(){
+            if(this.files.length===0){
+              document.getElementById('preview').src = '';
+              return;
+            }
+            var fr = new FileReader();
+            fr.onload = function(e){
+              document.getElementById('preview').src = e.target.result;
+            };
+            fr.readAsDataURL(this.files[0]);
+          };
+          </script>
+        </div>
+      </div>
+    </div>
+    <span class="nicheng">昵称：1834632332</span>
+  </div>
+  <div class="list">
+    <ul>
+      <a id="lwdsy" href="#" onclick="getAid(this.id);"><li class="myli">我的首页</li></a>
+    </ul>
+    <div class="grzzz">
+      <div class="pen" id="gr">个人展示</div>
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </div>
+    <ul class="pen-s" id="gr-s" style="display: none">
+      <a id="lgrxx" href="#" onclick="getAid(this.id);"><li class="myli">个人信息</li></a>
+      <a id="lwdtp" href="#" onclick="getAid(this.id);"><li class="myli">我的图片</li></a>
+      <a id="lypsp" href="#" onclick="getAid(this.id);"><li class="myli">音频视频</li></a>
+      <li class="myli" style="opacity: 0.5;">我的文章</li>
+      <a id="lwdwz" href="#" onclick="getAid(this.id);" style="display:none;"><li class="myli">我的文章</li></a>
+    </ul>
+    <ul>
+      <a id="lgzsc" href="#" onclick="getAid(this.id);"><li class="myli">关注收藏</li></a>
+    </ul>
+    <ul>
+      <a id="lwdxx" href="#" onclick="getAid(this.id);"><li class="myli">我的消息</li></a>
+    </ul>
+    <ul>
+      <a id="lyjfk" href="#" onclick="getAid(this.id);"><li class="myli">意见反馈</li></a>
+    </ul>
+    <div class="grzzz">
+      <div class="pen" id="sq">申请注册</div>
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </div>
+    <ul class="pen-s" id="sq-s" style="display: none">
+      <a id="lsqlc" href="#" onclick="getAid(this.id);"><li class="myli">申请流程</li></a>
+      <a id="lsqxy" href="#" onclick="getAid(this.id);"><li class="myli">申请协议</li></a>
+      <div class="grzzz3">
+        <div class="pen" id="bg">申请表格</div>
+      </div>
+      <ul class="pen-s" id="bg-s" style="display: block">
+        <a id="lgezc" href="#" onclick="getAid(this.id);"><li class="myli">个人注册</li></a>
+        <a id="lxyzc" href="#" onclick="getAid(this.id);"><li class="myli">学员注册</li></a>
+        <a id="ldwzc" href="#" onclick="getAid(this.id);"><li class="myli">单位注册</li></a>
+      </ul>
+    </ul>
+    <ul>
+      <li class="myli" style="opacity: 0.5;">会费缴纳</li>
+    </ul>
+    <ul>
+      <li class="myli" style="opacity: 0.5;">我的订单</li>
+    </ul>
+    <ul>
+      <li class="myli" style="opacity: 0.5;">查看会员证</li>
+    </ul>
+    <ul>
+      <%= link_to("/users/edit") do %>
+      <li class="myli">个人设置</li>
+      <%end%>
+    </ul>
+  </div>
+</div>
+<script>
+    $('#gr').click(function () {
+        $('#gr-s').toggle();
+    })
+    $('#sq').click(function(){
+        $('#sq-s').toggle();
+    })
+
+    function getAid(id)
+    {
+      a_id = id;
+      aid = a_id;
+      window.location.href="/personalmodel/userpage?a_id="+ aid;
+    }
+</script>

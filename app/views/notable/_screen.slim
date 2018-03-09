@@ -1,0 +1,63 @@
+.screen
+  .screen-title
+    ul.nav.nav-tabs
+      li.yzj.active
+        a href="#home" data-toggle="tab"
+          | 演奏家
+      li.yxjs
+        a href="#teacher" data-toggle="tab"
+          | 优秀教师
+    .tab-content
+      .tab-pane.fade.in.active#home
+        .screen-content
+          .content-title
+            .sxbq
+              | 所选标签：
+            .qc
+              | 清除筛选条件
+          .ysfl.mmenu#mmenu
+            span
+              | 艺术分类：
+            - @arts.each do |art|
+              a[id="art#{art.id}" onclick="getScreen(this.id);"]
+                = art.name
+          .jg
+            span
+              | 籍       贯：
+            - @provinces.each do |province|
+              a href="/"
+                = province.name
+          .byyx
+            span
+              | 毕业院校：
+            - @colleges.each do |college|
+              a href="/"
+                = college.name
+          .xhhy
+            span
+              | 协会会员：
+            - @institutes.each do |institute|
+              a href="/"
+                = institute.name
+      .tab-pane.fade.in.active#teacher
+
+
+
+javascript:
+  $('#mmenu').find('a').click(function () {
+    art_id = id.split("art");
+    art = art_id[1];
+    window.location.href="/notable/notable?art_id="+ art;
+  })
+  $(function () {
+      var href=window.location.href;
+      var getId=href.split('art_id=')[1];
+      $('#art'+getId).css({'background-color':'#5173ef','color':'#fff'});
+  })
+javascript:
+  function getScreen(id)
+  {
+    art_id = id.split("art");
+    art = art_id[1];
+    window.location.href="/notable/notable?art_id="+ art;
+  }

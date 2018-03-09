@@ -1,0 +1,42 @@
+.newslist-left
+  .article
+    .article-title
+      span.rmwz
+        | 相关申请
+      a.ckqb[href=""]
+        | 查看全部
+      a[href=""]
+        img[src="/assets/homepage/jt.png" height="11" width="11"]
+    ul.article-list
+      - @articles.each do |article|
+        li
+          = link_to
+            = article.title
+          span
+            = article.updated_at.strftime("%m-%d")
+  .video
+    .video-title
+      span.rmwz
+        | 相关视频
+      a.ckqb[href=""]
+        | 查看全部
+      a[href=""]
+        img[src="/assets/homepage/jt.png" height="11" width="11"]
+    ul
+      - @videos.each do |video|
+        li
+          .videoimg
+            = image_tag video.asset.url(:medium)
+          .bottom
+            span.sks
+              =video.title
+            a.star[href=""]
+              img[src="/assets/video/star.png" alt=""]
+            a[href=""]
+              img[src="/assets/video/sc.png" alt=""]
+            p
+              =video.written_by
+            a.bf[href=""]
+              img[src="/assets/video/bf.png" alt=""]
+            span[style="font-size: 10px;color: #2763af;"]
+              | 112.3万

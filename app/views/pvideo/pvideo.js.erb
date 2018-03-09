@@ -1,0 +1,9 @@
+<% if @pvideo.valid? %>
+
+  $("#pvideo").prepend("<%=j render(:partial => "pvideo"), :locals => { :pvideo => @pvideo })%>");
+
+<% else %>
+
+  alert("validation failed!");
+
+<% end %>

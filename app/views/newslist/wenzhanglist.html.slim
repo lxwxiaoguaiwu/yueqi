@@ -1,0 +1,61 @@
+.content
+  .newslist-right#wenzhanglist
+    .tab-pane.fade.in.active#home
+      .wenzhang-title
+        span
+          | 热门文章
+      .screen
+        ul
+          li.pl
+            | 排列 :
+          li.time
+            | 时间
+          li.xs
+            | 显示 :
+            input[type="text"]
+            img[src="/assets/newslist/adsada_03.png" alt=""]
+          li.sx
+            | 筛选 :
+            input[type="text"]
+            = image_tag("video/adsada_03.png")
+            input[type="text"]
+            = image_tag("video/adsada_05.png")
+      .list
+        ul
+          - @articles.each do |article|
+            li
+              .picture
+                = image_tag("video/adsada_14.png")
+              .new-content
+                a.zuo[href="/newsdetails/newsdetails/#{article.id}" aria-label="Previous"]
+                  =article.title
+                span.you
+                  | 50分钟前 | 评论 1009
+                p
+                  =article.written_by
+                .box
+                  button
+                    | 已藏
+                  = image_tag("video/sc.png")
+      nav[aria-label="Page navigation"]
+        ul.pagination
+          li
+            a[href="#" aria-label="Previous"]
+              span[aria-hidden="true"]
+                | 上一页
+          li
+            a[href="#"]
+              | 1
+          li
+            a[href="#"]
+              | 2
+          li
+            a[href="#"]
+              | 3
+          li
+            a[href="#"]
+              | 4
+          li
+            a[href="#" aria-label="Next"]
+              span[aria-hidden="true"]
+                | 下一页
